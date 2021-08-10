@@ -20,6 +20,22 @@ tokenizer = DistilBertTokenizer.from_pretrained(
     do_lower_case=True
 )
 
+
+def decide_set(text):
+    inputs = tokenizer.encode_plus(
+                    text,
+                    None,
+                    add_special_tokens=True,
+                    max_length=max_len,
+                    pad_to_max_length=True,
+                    return_token_type_ids=True
+                )
+    ids = inputs['input_ids']
+    mask = inputs['attention_mask']
+    ids_ = torch.tensor(ids, dtype=torch.long).to(device)
+    mask_ = torch.tensor(mask, dtype=torch.long).to(device)
+    return ids_.unsqueeze(0), mask_.unsqueeze(0), tokenizer.tokenize(text)
+
 ### Numpy
 
 import numpy as np

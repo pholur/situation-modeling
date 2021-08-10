@@ -17,6 +17,24 @@ def return_model(choice="pretrained"):
     model.to(device)
     return model
 
+def return_decoder(number_of_tags):
+    class Decoder(nn.Module):
+        def __init__(self):
+            self.decoder = nn.Linear(768, 768)
+            self.decoder_activation = nn.ReLU()
+            self.decoder_dropout = nn.Dropout(p=0.1)
+            self.decoder_output = nn.Linear(768, number_of_tags)
+
+        def forward(self, input):
+            input = self.decoder_dropout(input)
+            input = self.decoder(input)
+            input = self.decoder_activation(input)
+            input = self.decoder_dropout(input)
+            input = self.decoder_output(input)
+            return input
+
+    model = Decoder().to(device)
+    return model
 
 
 
