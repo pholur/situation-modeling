@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.4.0-42-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.3",
+    "heartbeatAt": "2021-09-17T05:58:05.427718",
+    "startedAt": "2021-09-17T05:58:03.020673",
+    "docker": null,
+    "gpu": "TITAN RTX",
+    "gpu_count": 6,
+    "cpu_count": 64,
+    "cuda": "9.0.176",
+    "args": [],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/pholur/situation-modeling.git",
+        "commit": "5e4d8f7c558837ae1b00d3e2a04e6bc3f17e97ed"
+    },
+    "email": "pholur@g.ucla.edu",
+    "root": "/home/pholur/Situation_Modeling",
+    "host": "tonmoy",
+    "username": "pholur",
+    "executable": "/home/pholur/miniconda3/envs/sit/bin/python"
+}
