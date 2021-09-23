@@ -1,0 +1,241 @@
+Some weights of the model checkpoint at distilbert-base-uncased were not used when initializing DistilBertForTokenClassification: ['vocab_transform.weight', 'vocab_transform.bias', 'vocab_layer_norm.weight', 'vocab_layer_norm.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing DistilBertForTokenClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DistilBertForTokenClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of DistilBertForTokenClassification were not initialized from the model checkpoint at distilbert-base-uncased and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+6286
+4999
+1924
+2639
+2575
+26
+33
+25
+22
+21
+20
+16
+14
+0
+1
+1962
+6596
+6593
+6589
+6586
+6581
+6579
+6576
+6575
+6569
+6568
+6566
+6564
+6563
+6558
+6556
+6544
+6540
+6539
+6537
+6531
+6529
+6514
+6511
+6507
+6496
+6495
+6494
+6493
+6492
+6489
+6482
+6480
+6470
+6465
+6459
+6458
+6456
+6438
+6435
+6434
+6431
+6430
+6427
+6424
+6420
+6405
+6402
+6398
+6397
+6396
+6391
+6389
+6386
+6385
+6383
+6375
+6372
+6370
+6368
+6367
+6365
+6363
+6359
+6355
+6353
+6352
+6349
+6346
+6338
+6333
+6330
+6324
+6320
+6312
+6311
+6308
+6304
+6301
+6294
+6285
+6284
+6283
+6279
+6273
+6266
+6263
+6258
+6256
+6255
+6254
+6251
+6250
+6249
+6245
+6244
+6241
+6232
+6231
+6230
+6225
+6223
+6222
+6221
+6220
+6219
+6208
+6205
+6200
+6198
+6190
+6186
+6185
+6182
+6180
+6178
+6174
+6172
+6171
+6170
+6165
+6161
+6156
+6155
+6153
+6152
+6147
+6146
+6143
+6142
+6140
+6139
+6134
+6128
+6127
+6122
+6116
+6112
+6108
+6101
+6098
+6097
+6089
+6085
+6082
+6081
+6080
+6076
+6075
+6070
+6069
+6067
+6066
+6061
+6059
+6053
+6049
+6045
+6042
+6040
+6037
+6036
+6035
+6030
+6015
+6013
+6011
+6009
+5992
+5990
+5989
+5983
+5981
+5975
+5973
+5970
+5965
+5959
+5958
+5956
+5952
+Traceback (most recent call last):
+  File "train.py", line 17, in <module>
+    train_loader = get_data(PATH, FLAG, AUG)
+  File "/home/pholur/Situation_Modeling/data.py", line 167, in get_data
+    dataset = get_dataset_from_file(path, AUG)
+  File "/home/pholur/Situation_Modeling/data.py", line 135, in get_dataset_from_file
+    total_augmented_posts = [main_post, *data_aug(main_post, AUG)]
+  File "/home/pholur/Situation_Modeling/data_aug.py", line 10, in data_aug
+    augmented_text = aug.augment(text, n=AUG)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/nlpaug/base_augmenter.py", line 95, in augment
+    result = action_fx(clean_data)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/nlpaug/augmenter/word/context_word_embs.py", line 256, in insert
+    outputs = self.model.predict(masked_texts, target_words=None, n=2)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/nlpaug/model/lang_models/fill_mask_transformers.py", line 74, in predict
+    predict_result = self.model(texts[i:i+self.batch_size])
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/pipelines.py", line 1247, in __call__
+    outputs = self._forward(inputs, return_tensors=True)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/pipelines.py", line 657, in _forward
+    predictions = self.model(**inputs)[0].cpu()
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/modeling_bert.py", line 1171, in forward
+    return_dict=return_dict,
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/modeling_bert.py", line 848, in forward
+    return_dict=return_dict,
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/modeling_bert.py", line 483, in forward
+    output_attentions,
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/modeling_bert.py", line 423, in forward
+    self.feed_forward_chunk, self.chunk_size_feed_forward, self.seq_len_dim, attention_output
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/modeling_utils.py", line 1700, in apply_chunking_to_forward
+    return forward_fn(*input_tensors)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/modeling_bert.py", line 429, in feed_forward_chunk
+    intermediate_output = self.intermediate(attention_output)
+KeyboardInterrupt

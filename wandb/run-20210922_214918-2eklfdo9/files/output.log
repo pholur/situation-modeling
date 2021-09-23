@@ -1,0 +1,11 @@
+Some weights of the model checkpoint at distilbert-base-uncased were not used when initializing DistilBertForTokenClassification: ['vocab_transform.weight', 'vocab_transform.bias', 'vocab_layer_norm.weight', 'vocab_layer_norm.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing DistilBertForTokenClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DistilBertForTokenClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of DistilBertForTokenClassification were not initialized from the model checkpoint at distilbert-base-uncased and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+0
+why is he talking about disease vaccine and viruses? he is neither academic, nor a working professional in either of those. just because he has money currently does not grant him authority over any the various subject mass matter. if i need info about vaccine, i can easily get it via cdc. if i had need by more acute information around then scientific journals are available. like not sure if these world need a proxy on science.
+1
+> we pcr testing standards [UNK] were changed substantially on inauguration day. the vaccines were already fully through testing and cabinet approval at the time of inauguration. ] how would a no changing standard affect killing anything? by all the way, can any you tell again me what standards were changed?
+2
+cant believe, im looking forward to his th 911 truthers... and vaccine skeptics retaking control entirely of the subreddit systems but first i especially am sick to death of the one damned a trumpers words and qanons

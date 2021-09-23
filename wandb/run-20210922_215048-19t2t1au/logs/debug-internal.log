@@ -1,0 +1,146 @@
+2021-09-22 21:50:49,272 INFO    MainThread:114953 [internal.py:wandb_internal():89] W&B internal server running at pid: 114953, started at: 2021-09-22 21:50:49.271830
+2021-09-22 21:50:49,274 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: check_version
+2021-09-22 21:50:49,275 INFO    WriterThread:114953 [datastore.py:open_for_write():77] open: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/run-19t2t1au.wandb
+2021-09-22 21:50:49,278 DEBUG   SenderThread:114953 [sender.py:send():185] send: header
+2021-09-22 21:50:49,278 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: check_version
+2021-09-22 21:50:49,327 DEBUG   SenderThread:114953 [sender.py:send():185] send: run
+2021-09-22 21:50:49,465 INFO    SenderThread:114953 [dir_watcher.py:__init__():169] watching files in: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files
+2021-09-22 21:50:49,465 INFO    SenderThread:114953 [sender.py:_start_run_threads():749] run started: 19t2t1au with start time 1632372648
+2021-09-22 21:50:49,466 DEBUG   SenderThread:114953 [sender.py:send():185] send: summary
+2021-09-22 21:50:49,466 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: run_start
+2021-09-22 21:50:49,467 INFO    SenderThread:114953 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:50:50,417 DEBUG   HandlerThread:114953 [meta.py:__init__():40] meta init
+2021-09-22 21:50:50,417 DEBUG   HandlerThread:114953 [meta.py:__init__():54] meta init done
+2021-09-22 21:50:50,417 DEBUG   HandlerThread:114953 [meta.py:probe():211] probe
+2021-09-22 21:50:50,425 DEBUG   HandlerThread:114953 [meta.py:_setup_git():201] setup git
+2021-09-22 21:50:50,454 DEBUG   HandlerThread:114953 [meta.py:_setup_git():208] setup git done
+2021-09-22 21:50:50,455 DEBUG   HandlerThread:114953 [meta.py:_save_pip():58] save pip
+2021-09-22 21:50:50,456 DEBUG   HandlerThread:114953 [meta.py:_save_pip():72] save pip done
+2021-09-22 21:50:50,456 DEBUG   HandlerThread:114953 [meta.py:_save_conda():79] save conda
+2021-09-22 21:50:50,470 INFO    Thread-8  :114953 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/requirements.txt
+2021-09-22 21:50:50,472 INFO    Thread-8  :114953 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/wandb-summary.json
+2021-09-22 21:50:50,472 INFO    Thread-8  :114953 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/conda-environment.yaml
+2021-09-22 21:50:53,748 DEBUG   HandlerThread:114953 [meta.py:_save_conda():87] save conda done
+2021-09-22 21:50:53,748 DEBUG   HandlerThread:114953 [meta.py:probe():249] probe done
+2021-09-22 21:50:53,772 DEBUG   SenderThread:114953 [sender.py:send():185] send: files
+2021-09-22 21:50:53,773 INFO    SenderThread:114953 [sender.py:_save_file():879] saving file wandb-metadata.json with policy now
+2021-09-22 21:50:53,781 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: stop_status
+2021-09-22 21:50:53,782 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: stop_status
+2021-09-22 21:50:54,113 INFO    Thread-11 :114953 [upload_job.py:push():137] Uploaded file /tmp/tmpni4wkkxhwandb/lk5khlst-wandb-metadata.json
+2021-09-22 21:50:54,471 INFO    Thread-8  :114953 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/conda-environment.yaml
+2021-09-22 21:50:54,472 INFO    Thread-8  :114953 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/output.log
+2021-09-22 21:50:54,472 INFO    Thread-8  :114953 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/wandb-metadata.json
+2021-09-22 21:50:58,473 INFO    Thread-8  :114953 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/output.log
+2021-09-22 21:51:04,477 INFO    Thread-8  :114953 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/output.log
+2021-09-22 21:51:05,714 WARNING MainThread:114953 [internal.py:wandb_internal():145] Internal process interrupt: 1
+2021-09-22 21:51:06,478 INFO    Thread-8  :114953 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/output.log
+2021-09-22 21:51:07,478 INFO    Thread-8  :114953 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/output.log
+2021-09-22 21:51:07,843 DEBUG   SenderThread:114953 [sender.py:send():185] send: telemetry
+2021-09-22 21:51:07,844 DEBUG   SenderThread:114953 [sender.py:send():185] send: exit
+2021-09-22 21:51:07,845 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:51:07,845 INFO    SenderThread:114953 [sender.py:send_exit():294] handling exit code: 255
+2021-09-22 21:51:07,846 INFO    SenderThread:114953 [sender.py:send_exit():296] handling runtime: 18
+2021-09-22 21:51:07,847 INFO    SenderThread:114953 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:51:07,847 INFO    SenderThread:114953 [sender.py:send_exit():306] send defer
+2021-09-22 21:51:07,848 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:51:07,849 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:51:07,849 INFO    HandlerThread:114953 [handler.py:handle_request_defer():143] handle defer: 0
+2021-09-22 21:51:07,850 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:51:07,850 INFO    SenderThread:114953 [sender.py:send_request_defer():315] handle sender defer: 0
+2021-09-22 21:51:07,850 INFO    SenderThread:114953 [sender.py:transition_state():319] send defer: 1
+2021-09-22 21:51:07,850 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:51:07,851 INFO    HandlerThread:114953 [handler.py:handle_request_defer():143] handle defer: 1
+2021-09-22 21:51:08,119 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:51:08,119 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:51:08,120 INFO    SenderThread:114953 [sender.py:send_request_defer():315] handle sender defer: 1
+2021-09-22 21:51:08,121 INFO    SenderThread:114953 [sender.py:transition_state():319] send defer: 2
+2021-09-22 21:51:08,121 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:51:08,122 DEBUG   SenderThread:114953 [sender.py:send():185] send: stats
+2021-09-22 21:51:08,123 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:51:08,124 INFO    HandlerThread:114953 [handler.py:handle_request_defer():143] handle defer: 2
+2021-09-22 21:51:08,124 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:51:08,124 INFO    SenderThread:114953 [sender.py:send_request_defer():315] handle sender defer: 2
+2021-09-22 21:51:08,124 INFO    SenderThread:114953 [sender.py:transition_state():319] send defer: 3
+2021-09-22 21:51:08,125 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:51:08,125 INFO    HandlerThread:114953 [handler.py:handle_request_defer():143] handle defer: 3
+2021-09-22 21:51:08,126 DEBUG   SenderThread:114953 [sender.py:send():185] send: summary
+2021-09-22 21:51:08,127 INFO    SenderThread:114953 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:51:08,127 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:51:08,127 INFO    SenderThread:114953 [sender.py:send_request_defer():315] handle sender defer: 3
+2021-09-22 21:51:08,127 INFO    SenderThread:114953 [sender.py:transition_state():319] send defer: 4
+2021-09-22 21:51:08,128 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:51:08,128 INFO    HandlerThread:114953 [handler.py:handle_request_defer():143] handle defer: 4
+2021-09-22 21:51:08,128 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:51:08,128 INFO    SenderThread:114953 [sender.py:send_request_defer():315] handle sender defer: 4
+2021-09-22 21:51:08,225 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:51:08,243 INFO    SenderThread:114953 [sender.py:transition_state():319] send defer: 5
+2021-09-22 21:51:08,243 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:51:08,243 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:51:08,243 INFO    HandlerThread:114953 [handler.py:handle_request_defer():143] handle defer: 5
+2021-09-22 21:51:08,244 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:51:08,244 INFO    SenderThread:114953 [sender.py:send_request_defer():315] handle sender defer: 5
+2021-09-22 21:51:08,244 INFO    SenderThread:114953 [dir_watcher.py:finish():283] shutting down directory watcher
+2021-09-22 21:51:08,345 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:51:08,479 INFO    Thread-8  :114953 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/output.log
+2021-09-22 21:51:08,480 INFO    SenderThread:114953 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/wandb-summary.json
+2021-09-22 21:51:08,480 INFO    SenderThread:114953 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/config.yaml
+2021-09-22 21:51:08,481 INFO    SenderThread:114953 [dir_watcher.py:finish():313] scan: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files
+2021-09-22 21:51:08,481 INFO    SenderThread:114953 [dir_watcher.py:finish():327] scan save: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/conda-environment.yaml conda-environment.yaml
+2021-09-22 21:51:08,482 INFO    SenderThread:114953 [dir_watcher.py:finish():327] scan save: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/output.log output.log
+2021-09-22 21:51:08,489 INFO    SenderThread:114953 [dir_watcher.py:finish():327] scan save: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/wandb-summary.json wandb-summary.json
+2021-09-22 21:51:08,490 INFO    SenderThread:114953 [dir_watcher.py:finish():327] scan save: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/requirements.txt requirements.txt
+2021-09-22 21:51:08,497 INFO    SenderThread:114953 [dir_watcher.py:finish():327] scan save: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/wandb-metadata.json wandb-metadata.json
+2021-09-22 21:51:08,497 INFO    SenderThread:114953 [dir_watcher.py:finish():327] scan save: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/config.yaml config.yaml
+2021-09-22 21:51:08,504 INFO    SenderThread:114953 [sender.py:transition_state():319] send defer: 6
+2021-09-22 21:51:08,504 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:51:08,510 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:51:08,511 INFO    HandlerThread:114953 [handler.py:handle_request_defer():143] handle defer: 6
+2021-09-22 21:51:08,517 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:51:08,523 INFO    SenderThread:114953 [sender.py:send_request_defer():315] handle sender defer: 6
+2021-09-22 21:51:08,523 INFO    SenderThread:114953 [file_pusher.py:finish():177] shutting down file pusher
+2021-09-22 21:51:08,611 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:51:08,612 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:51:08,714 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:51:08,715 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:51:08,817 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:51:08,817 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:51:08,847 INFO    Thread-13 :114953 [upload_job.py:push():137] Uploaded file /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/output.log
+2021-09-22 21:51:08,854 INFO    Thread-12 :114953 [upload_job.py:push():137] Uploaded file /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/conda-environment.yaml
+2021-09-22 21:51:08,860 INFO    Thread-16 :114953 [upload_job.py:push():137] Uploaded file /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/config.yaml
+2021-09-22 21:51:08,879 INFO    Thread-15 :114953 [upload_job.py:push():137] Uploaded file /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/requirements.txt
+2021-09-22 21:51:08,905 INFO    Thread-14 :114953 [upload_job.py:push():137] Uploaded file /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/files/wandb-summary.json
+2021-09-22 21:51:08,920 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:51:08,920 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:51:09,023 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:51:09,023 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:51:09,106 INFO    Thread-7  :114953 [sender.py:transition_state():319] send defer: 7
+2021-09-22 21:51:09,107 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:51:09,107 INFO    HandlerThread:114953 [handler.py:handle_request_defer():143] handle defer: 7
+2021-09-22 21:51:09,107 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:51:09,107 INFO    SenderThread:114953 [sender.py:send_request_defer():315] handle sender defer: 7
+2021-09-22 21:51:09,125 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:51:09,279 INFO    SenderThread:114953 [sender.py:transition_state():319] send defer: 8
+2021-09-22 21:51:09,279 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:51:09,280 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:51:09,280 INFO    HandlerThread:114953 [handler.py:handle_request_defer():143] handle defer: 8
+2021-09-22 21:51:09,281 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:51:09,281 INFO    SenderThread:114953 [sender.py:send_request_defer():315] handle sender defer: 8
+2021-09-22 21:51:09,281 INFO    SenderThread:114953 [sender.py:transition_state():319] send defer: 9
+2021-09-22 21:51:09,282 DEBUG   SenderThread:114953 [sender.py:send():185] send: final
+2021-09-22 21:51:09,283 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:51:09,283 DEBUG   SenderThread:114953 [sender.py:send():185] send: footer
+2021-09-22 21:51:09,283 INFO    HandlerThread:114953 [handler.py:handle_request_defer():143] handle defer: 9
+2021-09-22 21:51:09,283 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:51:09,283 INFO    SenderThread:114953 [sender.py:send_request_defer():315] handle sender defer: 9
+2021-09-22 21:51:09,382 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:51:09,383 DEBUG   SenderThread:114953 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:51:09,383 INFO    SenderThread:114953 [file_pusher.py:join():182] waiting for file pusher
+2021-09-22 21:51:09,549 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: get_summary
+2021-09-22 21:51:09,551 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: sampled_history
+2021-09-22 21:51:09,552 DEBUG   HandlerThread:114953 [handler.py:handle_request():126] handle_request: shutdown
+2021-09-22 21:51:09,552 INFO    HandlerThread:114953 [handler.py:finish():683] shutting down handler
+2021-09-22 21:51:10,283 INFO    WriterThread:114953 [datastore.py:close():281] close: /home/pholur/Situation_Modeling/wandb/run-20210922_215048-19t2t1au/run-19t2t1au.wandb
+2021-09-22 21:51:10,547 INFO    SenderThread:114953 [sender.py:finish():985] shutting down sender
+2021-09-22 21:51:10,547 INFO    SenderThread:114953 [file_pusher.py:finish():177] shutting down file pusher
+2021-09-22 21:51:10,547 INFO    SenderThread:114953 [file_pusher.py:join():182] waiting for file pusher
+2021-09-22 21:51:10,551 INFO    MainThread:114953 [internal.py:handle_exit():76] Internal process exited

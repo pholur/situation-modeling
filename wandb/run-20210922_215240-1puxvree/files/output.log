@@ -1,0 +1,165 @@
+Some weights of the model checkpoint at distilbert-base-uncased were not used when initializing DistilBertForTokenClassification: ['vocab_transform.weight', 'vocab_transform.bias', 'vocab_layer_norm.weight', 'vocab_layer_norm.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing DistilBertForTokenClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DistilBertForTokenClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of DistilBertForTokenClassification were not initialized from the model checkpoint at distilbert-base-uncased and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+Using separate samples per entity: Size =  933
+0 tensor(1.1349, device='cuda:1', grad_fn=<NllLossBackward>)
+1 tensor(1.1027, device='cuda:1', grad_fn=<NllLossBackward>)
+2 tensor(1.0036, device='cuda:1', grad_fn=<NllLossBackward>)
+3 tensor(0.8789, device='cuda:1', grad_fn=<NllLossBackward>)
+4 tensor(0.7682, device='cuda:1', grad_fn=<NllLossBackward>)
+5 tensor(0.8353, device='cuda:1', grad_fn=<NllLossBackward>)
+6 tensor(1.5783, device='cuda:1', grad_fn=<NllLossBackward>)
+7 tensor(1.4885, device='cuda:1', grad_fn=<NllLossBackward>)
+8 tensor(1.3981, device='cuda:1', grad_fn=<NllLossBackward>)
+9 tensor(1.6356, device='cuda:1', grad_fn=<NllLossBackward>)
+10 tensor(1.3886, device='cuda:1', grad_fn=<NllLossBackward>)
+11 tensor(1.4264, device='cuda:1', grad_fn=<NllLossBackward>)
+12 tensor(1.2262, device='cuda:1', grad_fn=<NllLossBackward>)
+13 tensor(1.1785, device='cuda:1', grad_fn=<NllLossBackward>)
+14 tensor(1.3140, device='cuda:1', grad_fn=<NllLossBackward>)
+15 tensor(1.1718, device='cuda:1', grad_fn=<NllLossBackward>)
+16 tensor(1.1617, device='cuda:1', grad_fn=<NllLossBackward>)
+17 tensor(1.1562, device='cuda:1', grad_fn=<NllLossBackward>)
+18 tensor(1.0687, device='cuda:1', grad_fn=<NllLossBackward>)
+19 tensor(1.2274, device='cuda:1', grad_fn=<NllLossBackward>)
+20 tensor(1.3859, device='cuda:1', grad_fn=<NllLossBackward>)
+21 tensor(1.3578, device='cuda:1', grad_fn=<NllLossBackward>)
+22 tensor(1.1416, device='cuda:1', grad_fn=<NllLossBackward>)
+23 tensor(1.1499, device='cuda:1', grad_fn=<NllLossBackward>)
+24 tensor(1.0801, device='cuda:1', grad_fn=<NllLossBackward>)
+25 tensor(1.0823, device='cuda:1', grad_fn=<NllLossBackward>)
+26 tensor(1.1741, device='cuda:1', grad_fn=<NllLossBackward>)
+27 tensor(1.2968, device='cuda:1', grad_fn=<NllLossBackward>)
+28 tensor(1.2735, device='cuda:1', grad_fn=<NllLossBackward>)
+29 tensor(1.1783, device='cuda:1', grad_fn=<NllLossBackward>)
+30 tensor(1.1992, device='cuda:1', grad_fn=<NllLossBackward>)
+31 tensor(1.3054, device='cuda:1', grad_fn=<NllLossBackward>)
+32 tensor(1.2056, device='cuda:1', grad_fn=<NllLossBackward>)
+33 tensor(1.1352, device='cuda:1', grad_fn=<NllLossBackward>)
+34 tensor(0.9585, device='cuda:1', grad_fn=<NllLossBackward>)
+35 tensor(0.8499, device='cuda:1', grad_fn=<NllLossBackward>)
+36 tensor(1.6123, device='cuda:1', grad_fn=<NllLossBackward>)
+37 tensor(1.2996, device='cuda:1', grad_fn=<NllLossBackward>)
+38 tensor(0.7846, device='cuda:1', grad_fn=<NllLossBackward>)
+39 tensor(0.9369, device='cuda:1', grad_fn=<NllLossBackward>)
+40 tensor(0.6665, device='cuda:1', grad_fn=<NllLossBackward>)
+41 tensor(0.8579, device='cuda:1', grad_fn=<NllLossBackward>)
+42 tensor(1.1552, device='cuda:1', grad_fn=<NllLossBackward>)
+43 tensor(0.5979, device='cuda:1', grad_fn=<NllLossBackward>)
+44 tensor(0.8944, device='cuda:1', grad_fn=<NllLossBackward>)
+45 tensor(1.1777, device='cuda:1', grad_fn=<NllLossBackward>)
+46 tensor(0.9409, device='cuda:1', grad_fn=<NllLossBackward>)
+47 tensor(1.5590, device='cuda:1', grad_fn=<NllLossBackward>)
+48 tensor(1.3208, device='cuda:1', grad_fn=<NllLossBackward>)
+49 tensor(1.8285, device='cuda:1', grad_fn=<NllLossBackward>)
+50 tensor(1.1309, device='cuda:1', grad_fn=<NllLossBackward>)
+51 tensor(1.9240, device='cuda:1', grad_fn=<NllLossBackward>)
+52 tensor(1.1426, device='cuda:1', grad_fn=<NllLossBackward>)
+53 tensor(1.5572, device='cuda:1', grad_fn=<NllLossBackward>)
+54 tensor(0.8794, device='cuda:1', grad_fn=<NllLossBackward>)
+55 tensor(0.7792, device='cuda:1', grad_fn=<NllLossBackward>)
+56 tensor(1.0286, device='cuda:1', grad_fn=<NllLossBackward>)
+57 tensor(0.9322, device='cuda:1', grad_fn=<NllLossBackward>)
+58 tensor(0.6404, device='cuda:1', grad_fn=<NllLossBackward>)

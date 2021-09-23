@@ -1,0 +1,366 @@
+2021-09-22 21:52:41,450 INFO    MainThread:118446 [internal.py:wandb_internal():89] W&B internal server running at pid: 118446, started at: 2021-09-22 21:52:41.449841
+2021-09-22 21:52:41,452 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: check_version
+2021-09-22 21:52:41,452 INFO    WriterThread:118446 [datastore.py:open_for_write():77] open: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/run-1puxvree.wandb
+2021-09-22 21:52:41,456 DEBUG   SenderThread:118446 [sender.py:send():185] send: header
+2021-09-22 21:52:41,456 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: check_version
+2021-09-22 21:52:41,510 DEBUG   SenderThread:118446 [sender.py:send():185] send: run
+2021-09-22 21:52:41,648 INFO    SenderThread:118446 [dir_watcher.py:__init__():169] watching files in: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files
+2021-09-22 21:52:41,648 INFO    SenderThread:118446 [sender.py:_start_run_threads():749] run started: 1puxvree with start time 1632372760
+2021-09-22 21:52:41,649 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:52:41,649 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:52:41,650 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: run_start
+2021-09-22 21:52:42,647 DEBUG   HandlerThread:118446 [meta.py:__init__():40] meta init
+2021-09-22 21:52:42,647 DEBUG   HandlerThread:118446 [meta.py:__init__():54] meta init done
+2021-09-22 21:52:42,647 DEBUG   HandlerThread:118446 [meta.py:probe():211] probe
+2021-09-22 21:52:42,652 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/wandb-summary.json
+2021-09-22 21:52:42,662 DEBUG   HandlerThread:118446 [meta.py:_setup_git():201] setup git
+2021-09-22 21:52:42,701 DEBUG   HandlerThread:118446 [meta.py:_setup_git():208] setup git done
+2021-09-22 21:52:42,702 DEBUG   HandlerThread:118446 [meta.py:_save_pip():58] save pip
+2021-09-22 21:52:42,704 DEBUG   HandlerThread:118446 [meta.py:_save_pip():72] save pip done
+2021-09-22 21:52:42,705 DEBUG   HandlerThread:118446 [meta.py:_save_conda():79] save conda
+2021-09-22 21:52:43,659 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/requirements.txt
+2021-09-22 21:52:43,660 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/conda-environment.yaml
+2021-09-22 21:52:45,984 DEBUG   HandlerThread:118446 [meta.py:_save_conda():87] save conda done
+2021-09-22 21:52:45,984 DEBUG   HandlerThread:118446 [meta.py:probe():249] probe done
+2021-09-22 21:52:46,021 DEBUG   SenderThread:118446 [sender.py:send():185] send: files
+2021-09-22 21:52:46,022 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-metadata.json with policy now
+2021-09-22 21:52:46,035 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: stop_status
+2021-09-22 21:52:46,036 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: stop_status
+2021-09-22 21:52:46,317 INFO    Thread-11 :118446 [upload_job.py:push():137] Uploaded file /tmp/tmpto0xwlexwandb/3064unyy-wandb-metadata.json
+2021-09-22 21:52:46,660 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/conda-environment.yaml
+2021-09-22 21:52:46,661 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:52:46,661 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/wandb-metadata.json
+2021-09-22 21:52:50,662 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:52:56,667 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:52:58,668 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:00,670 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:01,133 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: stop_status
+2021-09-22 21:53:01,134 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: stop_status
+2021-09-22 21:53:02,671 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:04,672 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:06,673 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:08,674 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:10,675 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:12,677 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:14,678 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:16,229 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: stop_status
+2021-09-22 21:53:16,229 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: stop_status
+2021-09-22 21:53:16,527 DEBUG   SenderThread:118446 [sender.py:send():185] send: stats
+2021-09-22 21:53:16,680 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:18,681 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:20,682 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:22,683 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:24,684 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:26,685 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:28,687 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:30,688 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:31,322 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: stop_status
+2021-09-22 21:53:31,322 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: stop_status
+2021-09-22 21:53:32,689 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:34,690 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:36,691 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:38,692 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:40,693 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:42,694 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:44,695 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:46,414 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: stop_status
+2021-09-22 21:53:46,414 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: stop_status
+2021-09-22 21:53:46,696 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:48,697 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:50,377 DEBUG   SenderThread:118446 [sender.py:send():185] send: stats
+2021-09-22 21:53:50,699 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:52,700 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:54,702 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:55,328 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:55,329 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:55,330 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:55,387 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:55,387 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:55,388 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:55,435 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:55,435 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:55,436 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:55,478 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:55,479 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:55,479 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:55,519 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:55,520 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:55,520 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:55,565 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:55,565 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:55,565 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:55,610 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:55,611 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:55,611 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:55,651 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:55,651 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:55,652 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:55,694 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:55,695 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:55,695 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:55,702 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/wandb-summary.json
+2021-09-22 21:53:55,737 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:55,737 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:55,738 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:55,780 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:55,780 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:55,781 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:55,823 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:55,824 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:55,824 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:55,867 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:55,867 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:55,868 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:55,910 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:55,910 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:55,911 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:55,954 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:55,954 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:55,955 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:55,998 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:55,999 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:55,999 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,042 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,042 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,042 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,086 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,087 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,087 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,129 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,130 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,131 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,176 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,176 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,177 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,220 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,221 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,221 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,265 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,266 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,266 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,316 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,317 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,318 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,362 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,362 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,363 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,406 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,406 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,407 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,450 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,450 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,451 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,491 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,492 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,492 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,534 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,535 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,536 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,580 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,581 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,582 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,624 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,625 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,625 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,668 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,668 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,669 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,703 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:56,703 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/wandb-summary.json
+2021-09-22 21:53:56,711 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,711 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,712 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,755 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,755 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,756 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,797 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,798 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,799 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,839 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,840 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,840 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,879 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,880 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,881 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,928 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,929 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,930 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:56,967 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:56,967 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:56,968 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,012 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,012 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,013 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,054 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,055 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,056 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,095 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,096 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,096 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,135 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,136 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,136 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,176 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,177 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,177 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,216 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,217 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,218 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,256 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,257 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,257 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,297 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,297 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,298 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,336 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,337 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,338 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,377 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,378 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,378 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,418 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,418 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,419 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,458 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,458 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,459 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,498 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,499 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,499 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,538 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,539 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,539 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,579 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,579 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,580 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,628 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,629 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,630 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,668 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,669 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,669 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,703 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/wandb-summary.json
+2021-09-22 21:53:57,709 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,709 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,710 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,749 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,749 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,750 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,789 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,790 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,790 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:57,812 DEBUG   SenderThread:118446 [sender.py:send():185] send: history
+2021-09-22 21:53:57,812 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:53:57,813 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:53:58,704 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:53:58,704 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/wandb-summary.json
+2021-09-22 21:54:00,573 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:54:00,573 DEBUG   SenderThread:118446 [sender.py:send():185] send: telemetry
+2021-09-22 21:54:00,574 DEBUG   SenderThread:118446 [sender.py:send():185] send: exit
+2021-09-22 21:54:00,574 INFO    SenderThread:118446 [sender.py:send_exit():294] handling exit code: 0
+2021-09-22 21:54:00,575 INFO    SenderThread:118446 [sender.py:send_exit():296] handling runtime: 78
+2021-09-22 21:54:00,576 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:54:00,576 INFO    SenderThread:118446 [sender.py:send_exit():306] send defer
+2021-09-22 21:54:00,576 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:54:00,577 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:54:00,578 INFO    HandlerThread:118446 [handler.py:handle_request_defer():143] handle defer: 0
+2021-09-22 21:54:00,578 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:54:00,579 INFO    SenderThread:118446 [sender.py:send_request_defer():315] handle sender defer: 0
+2021-09-22 21:54:00,579 INFO    SenderThread:118446 [sender.py:transition_state():319] send defer: 1
+2021-09-22 21:54:00,579 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:54:00,579 INFO    HandlerThread:118446 [handler.py:handle_request_defer():143] handle defer: 1
+2021-09-22 21:54:00,705 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:54:00,706 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/wandb-summary.json
+2021-09-22 21:54:00,827 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:54:00,828 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:54:00,829 INFO    SenderThread:118446 [sender.py:send_request_defer():315] handle sender defer: 1
+2021-09-22 21:54:00,829 INFO    SenderThread:118446 [sender.py:transition_state():319] send defer: 2
+2021-09-22 21:54:00,829 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:54:00,830 DEBUG   SenderThread:118446 [sender.py:send():185] send: stats
+2021-09-22 21:54:00,830 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:54:00,832 INFO    HandlerThread:118446 [handler.py:handle_request_defer():143] handle defer: 2
+2021-09-22 21:54:00,832 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:54:00,832 INFO    SenderThread:118446 [sender.py:send_request_defer():315] handle sender defer: 2
+2021-09-22 21:54:00,832 INFO    SenderThread:118446 [sender.py:transition_state():319] send defer: 3
+2021-09-22 21:54:00,833 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:54:00,833 INFO    HandlerThread:118446 [handler.py:handle_request_defer():143] handle defer: 3
+2021-09-22 21:54:00,834 DEBUG   SenderThread:118446 [sender.py:send():185] send: summary
+2021-09-22 21:54:00,834 INFO    SenderThread:118446 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:54:00,835 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:54:00,835 INFO    SenderThread:118446 [sender.py:send_request_defer():315] handle sender defer: 3
+2021-09-22 21:54:00,835 INFO    SenderThread:118446 [sender.py:transition_state():319] send defer: 4
+2021-09-22 21:54:00,836 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:54:00,836 INFO    HandlerThread:118446 [handler.py:handle_request_defer():143] handle defer: 4
+2021-09-22 21:54:00,836 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:54:00,836 INFO    SenderThread:118446 [sender.py:send_request_defer():315] handle sender defer: 4
+2021-09-22 21:54:00,932 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:54:00,950 INFO    SenderThread:118446 [sender.py:transition_state():319] send defer: 5
+2021-09-22 21:54:00,950 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:54:00,951 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:54:00,951 INFO    HandlerThread:118446 [handler.py:handle_request_defer():143] handle defer: 5
+2021-09-22 21:54:00,951 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:54:00,952 INFO    SenderThread:118446 [sender.py:send_request_defer():315] handle sender defer: 5
+2021-09-22 21:54:00,952 INFO    SenderThread:118446 [dir_watcher.py:finish():283] shutting down directory watcher
+2021-09-22 21:54:01,053 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:54:01,706 INFO    Thread-8  :118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/wandb-summary.json
+2021-09-22 21:54:01,707 INFO    SenderThread:118446 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/config.yaml
+2021-09-22 21:54:01,707 INFO    SenderThread:118446 [dir_watcher.py:finish():313] scan: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files
+2021-09-22 21:54:01,708 INFO    SenderThread:118446 [dir_watcher.py:finish():327] scan save: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/conda-environment.yaml conda-environment.yaml
+2021-09-22 21:54:01,708 INFO    SenderThread:118446 [dir_watcher.py:finish():327] scan save: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log output.log
+2021-09-22 21:54:01,709 INFO    SenderThread:118446 [dir_watcher.py:finish():327] scan save: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/wandb-summary.json wandb-summary.json
+2021-09-22 21:54:01,709 INFO    SenderThread:118446 [dir_watcher.py:finish():327] scan save: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/requirements.txt requirements.txt
+2021-09-22 21:54:01,724 INFO    SenderThread:118446 [dir_watcher.py:finish():327] scan save: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/wandb-metadata.json wandb-metadata.json
+2021-09-22 21:54:01,724 INFO    SenderThread:118446 [dir_watcher.py:finish():327] scan save: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/config.yaml config.yaml
+2021-09-22 21:54:01,728 INFO    SenderThread:118446 [sender.py:transition_state():319] send defer: 6
+2021-09-22 21:54:01,729 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:54:01,741 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:54:01,742 INFO    HandlerThread:118446 [handler.py:handle_request_defer():143] handle defer: 6
+2021-09-22 21:54:01,744 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:54:01,744 INFO    SenderThread:118446 [sender.py:send_request_defer():315] handle sender defer: 6
+2021-09-22 21:54:01,745 INFO    SenderThread:118446 [file_pusher.py:finish():177] shutting down file pusher
+2021-09-22 21:54:01,848 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:54:01,849 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:54:01,952 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:54:01,952 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:54:02,055 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:54:02,055 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:54:02,073 INFO    Thread-14 :118446 [upload_job.py:push():137] Uploaded file /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/wandb-summary.json
+2021-09-22 21:54:02,088 INFO    Thread-16 :118446 [upload_job.py:push():137] Uploaded file /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/config.yaml
+2021-09-22 21:54:02,101 INFO    Thread-12 :118446 [upload_job.py:push():137] Uploaded file /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/conda-environment.yaml
+2021-09-22 21:54:02,108 INFO    Thread-15 :118446 [upload_job.py:push():137] Uploaded file /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/requirements.txt
+2021-09-22 21:54:02,119 INFO    Thread-13 :118446 [upload_job.py:push():137] Uploaded file /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/files/output.log
+2021-09-22 21:54:02,158 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:54:02,158 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:54:02,260 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:54:02,261 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:54:02,320 INFO    Thread-7  :118446 [sender.py:transition_state():319] send defer: 7
+2021-09-22 21:54:02,321 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:54:02,321 INFO    HandlerThread:118446 [handler.py:handle_request_defer():143] handle defer: 7
+2021-09-22 21:54:02,322 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:54:02,322 INFO    SenderThread:118446 [sender.py:send_request_defer():315] handle sender defer: 7
+2021-09-22 21:54:02,363 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:54:02,492 INFO    SenderThread:118446 [sender.py:transition_state():319] send defer: 8
+2021-09-22 21:54:02,492 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:54:02,493 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:54:02,493 INFO    HandlerThread:118446 [handler.py:handle_request_defer():143] handle defer: 8
+2021-09-22 21:54:02,494 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:54:02,494 INFO    SenderThread:118446 [sender.py:send_request_defer():315] handle sender defer: 8
+2021-09-22 21:54:02,494 INFO    SenderThread:118446 [sender.py:transition_state():319] send defer: 9
+2021-09-22 21:54:02,495 DEBUG   SenderThread:118446 [sender.py:send():185] send: final
+2021-09-22 21:54:02,495 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: defer
+2021-09-22 21:54:02,496 DEBUG   SenderThread:118446 [sender.py:send():185] send: footer
+2021-09-22 21:54:02,496 INFO    HandlerThread:118446 [handler.py:handle_request_defer():143] handle defer: 9
+2021-09-22 21:54:02,496 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: defer
+2021-09-22 21:54:02,496 INFO    SenderThread:118446 [sender.py:send_request_defer():315] handle sender defer: 9
+2021-09-22 21:54:02,595 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: poll_exit
+2021-09-22 21:54:02,596 DEBUG   SenderThread:118446 [sender.py:send_request():199] send_request: poll_exit
+2021-09-22 21:54:02,596 INFO    SenderThread:118446 [file_pusher.py:join():182] waiting for file pusher
+2021-09-22 21:54:02,765 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: get_summary
+2021-09-22 21:54:02,767 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: sampled_history
+2021-09-22 21:54:02,771 DEBUG   HandlerThread:118446 [handler.py:handle_request():126] handle_request: shutdown
+2021-09-22 21:54:02,771 INFO    HandlerThread:118446 [handler.py:finish():683] shutting down handler
+2021-09-22 21:54:03,496 INFO    WriterThread:118446 [datastore.py:close():281] close: /home/pholur/Situation_Modeling/wandb/run-20210922_215240-1puxvree/run-1puxvree.wandb
+2021-09-22 21:54:03,763 INFO    SenderThread:118446 [sender.py:finish():985] shutting down sender
+2021-09-22 21:54:03,763 INFO    SenderThread:118446 [file_pusher.py:finish():177] shutting down file pusher
+2021-09-22 21:54:03,764 INFO    SenderThread:118446 [file_pusher.py:join():182] waiting for file pusher
+2021-09-22 21:54:03,767 INFO    MainThread:118446 [internal.py:handle_exit():76] Internal process exited

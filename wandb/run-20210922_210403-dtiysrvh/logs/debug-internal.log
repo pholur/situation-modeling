@@ -1,0 +1,41 @@
+2021-09-22 21:04:04,152 INFO    MainThread:39602 [internal.py:wandb_internal():89] W&B internal server running at pid: 39602, started at: 2021-09-22 21:04:04.152112
+2021-09-22 21:04:04,155 DEBUG   HandlerThread:39602 [handler.py:handle_request():126] handle_request: check_version
+2021-09-22 21:04:04,155 INFO    WriterThread:39602 [datastore.py:open_for_write():77] open: /home/pholur/Situation_Modeling/wandb/run-20210922_210403-dtiysrvh/run-dtiysrvh.wandb
+2021-09-22 21:04:04,159 DEBUG   SenderThread:39602 [sender.py:send():185] send: header
+2021-09-22 21:04:04,159 DEBUG   SenderThread:39602 [sender.py:send_request():199] send_request: check_version
+2021-09-22 21:04:04,416 DEBUG   SenderThread:39602 [sender.py:send():185] send: run
+2021-09-22 21:04:04,552 INFO    SenderThread:39602 [dir_watcher.py:__init__():169] watching files in: /home/pholur/Situation_Modeling/wandb/run-20210922_210403-dtiysrvh/files
+2021-09-22 21:04:04,552 INFO    SenderThread:39602 [sender.py:_start_run_threads():749] run started: dtiysrvh with start time 1632369843
+2021-09-22 21:04:04,552 DEBUG   SenderThread:39602 [sender.py:send():185] send: summary
+2021-09-22 21:04:04,553 INFO    SenderThread:39602 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-09-22 21:04:04,554 DEBUG   HandlerThread:39602 [handler.py:handle_request():126] handle_request: run_start
+2021-09-22 21:04:05,495 DEBUG   HandlerThread:39602 [meta.py:__init__():40] meta init
+2021-09-22 21:04:05,496 DEBUG   HandlerThread:39602 [meta.py:__init__():54] meta init done
+2021-09-22 21:04:05,496 DEBUG   HandlerThread:39602 [meta.py:probe():211] probe
+2021-09-22 21:04:05,503 DEBUG   HandlerThread:39602 [meta.py:_setup_git():201] setup git
+2021-09-22 21:04:05,534 DEBUG   HandlerThread:39602 [meta.py:_setup_git():208] setup git done
+2021-09-22 21:04:05,534 DEBUG   HandlerThread:39602 [meta.py:_save_pip():58] save pip
+2021-09-22 21:04:05,536 DEBUG   HandlerThread:39602 [meta.py:_save_pip():72] save pip done
+2021-09-22 21:04:05,536 DEBUG   HandlerThread:39602 [meta.py:_save_conda():79] save conda
+2021-09-22 21:04:05,556 INFO    Thread-8  :39602 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20210922_210403-dtiysrvh/files/conda-environment.yaml
+2021-09-22 21:04:05,558 INFO    Thread-8  :39602 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20210922_210403-dtiysrvh/files/requirements.txt
+2021-09-22 21:04:05,558 INFO    Thread-8  :39602 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20210922_210403-dtiysrvh/files/wandb-summary.json
+2021-09-22 21:04:08,749 DEBUG   HandlerThread:39602 [meta.py:_save_conda():87] save conda done
+2021-09-22 21:04:08,749 DEBUG   HandlerThread:39602 [meta.py:probe():249] probe done
+2021-09-22 21:04:08,774 DEBUG   SenderThread:39602 [sender.py:send():185] send: files
+2021-09-22 21:04:08,774 INFO    SenderThread:39602 [sender.py:_save_file():879] saving file wandb-metadata.json with policy now
+2021-09-22 21:04:08,780 DEBUG   HandlerThread:39602 [handler.py:handle_request():126] handle_request: stop_status
+2021-09-22 21:04:08,780 DEBUG   SenderThread:39602 [sender.py:send_request():199] send_request: stop_status
+2021-09-22 21:04:09,077 INFO    Thread-11 :39602 [upload_job.py:push():137] Uploaded file /tmp/tmpbq4usf3ewandb/bvjasx3a-wandb-metadata.json
+2021-09-22 21:04:09,558 INFO    Thread-8  :39602 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_210403-dtiysrvh/files/conda-environment.yaml
+2021-09-22 21:04:09,559 INFO    Thread-8  :39602 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20210922_210403-dtiysrvh/files/wandb-metadata.json
+2021-09-22 21:04:09,559 INFO    Thread-8  :39602 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20210922_210403-dtiysrvh/files/output.log
+2021-09-22 21:04:13,560 INFO    Thread-8  :39602 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_210403-dtiysrvh/files/output.log
+2021-09-22 21:04:19,563 INFO    Thread-8  :39602 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_210403-dtiysrvh/files/output.log
+2021-09-22 21:04:23,871 DEBUG   HandlerThread:39602 [handler.py:handle_request():126] handle_request: stop_status
+2021-09-22 21:04:23,871 DEBUG   SenderThread:39602 [sender.py:send_request():199] send_request: stop_status
+2021-09-22 21:04:32,594 WARNING MainThread:39602 [internal.py:wandb_internal():145] Internal process interrupt: 1
+2021-09-22 21:04:32,856 WARNING MainThread:39602 [internal.py:wandb_internal():145] Internal process interrupt: 2
+2021-09-22 21:04:32,856 ERROR   MainThread:39602 [internal.py:wandb_internal():148] Internal process interrupted.
+2021-09-22 21:04:33,571 INFO    Thread-8  :39602 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20210922_210403-dtiysrvh/files/output.log
+2021-09-22 21:04:33,720 INFO    MainThread:39602 [internal.py:handle_exit():76] Internal process exited

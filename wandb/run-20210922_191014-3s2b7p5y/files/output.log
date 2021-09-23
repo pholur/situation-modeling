@@ -1,0 +1,31 @@
+Some weights of the model checkpoint at distilbert-base-uncased were not used when initializing DistilBertForTokenClassification: ['vocab_transform.weight', 'vocab_transform.bias', 'vocab_layer_norm.weight', 'vocab_layer_norm.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing DistilBertForTokenClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DistilBertForTokenClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of DistilBertForTokenClassification were not initialized from the model checkpoint at distilbert-base-uncased and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "train.py", line 17, in <module>
+    train_loader = get_data(PATH, FLAG)
+  File "/home/pholur/Situation_Modeling/data.py", line 167, in get_data
+    dataset = get_dataset_from_file(path)
+  File "/home/pholur/Situation_Modeling/data.py", line 135, in get_dataset_from_file
+    total_augmented_posts = [main_post, *data_aug(main_post)]
+  File "/home/pholur/Situation_Modeling/data_aug.py", line 10, in data_aug
+    augmented_text = aug.augment(text, n=20)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/nlpaug/base_augmenter.py", line 95, in augment
+    result = action_fx(clean_data)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/nlpaug/augmenter/word/context_word_embs.py", line 256, in insert
+    outputs = self.model.predict(masked_texts, target_words=None, n=2)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/nlpaug/model/lang_models/fill_mask_transformers.py", line 74, in predict
+    predict_result = self.model(texts[i:i+self.batch_size])
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/pipelines.py", line 1313, in __call__
+    "sequence": self.tokenizer.decode(tokens),
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/tokenization_utils_base.py", line 3002, in decode
+    **kwargs,
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/tokenization_utils.py", line 732, in _decode
+    filtered_tokens = self.convert_ids_to_tokens(token_ids, skip_special_tokens=skip_special_tokens)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/tokenization_utils.py", line 716, in convert_ids_to_tokens
+    tokens.append(self._convert_id_to_token(index))
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/tokenization_bert.py", line 241, in _convert_id_to_token
+    return self.ids_to_tokens.get(index, self.unk_token)
+KeyboardInterrupt
