@@ -1,0 +1,30 @@
+Can't set hidden_size with value 768 for DistilBertConfig {
+  "architectures": [
+    "RobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "model_type": "distilbert",
+  "pad_token_id": 1
+}
+Traceback (most recent call last):
+  File "train.py", line 10, in <module>
+    model = return_token_model(CORE_MODEL, len(labels), device)
+  File "/home/pholur/Situation_Modeling/arch.py", line 4, in return_token_model
+    model = DistilBertForTokenClassification.from_pretrained(model_name, num_labels=num_labels)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/modeling_utils.py", line 877, in from_pretrained
+    **kwargs,
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/configuration_utils.py", line 348, in from_pretrained
+    return cls.from_dict(config_dict, **kwargs)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/configuration_utils.py", line 435, in from_dict
+    config = cls(**config_dict)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/configuration_distilbert.py", line 112, in __init__
+    super().__init__(**kwargs, pad_token_id=pad_token_id)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/configuration_utils.py", line 236, in __init__
+    raise err
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/configuration_utils.py", line 233, in __init__
+    setattr(self, key, value)
+AttributeError: can't set attribute
