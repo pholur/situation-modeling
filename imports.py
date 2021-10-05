@@ -31,6 +31,7 @@ BATCH_SIZE = 64#128#16
 AUG = [20,0,0] # has to be greater than 1
 FRACTION = [0.6, 0.2, 0.2]
 REEXTRACT = False
+SAVE = False # works with reextract flag
 LEARNING_RATE = 1e-6#1e-5 #1e-4 seems too high #5e-5 seems too high
 FROZEN_LAYERS = -2
 

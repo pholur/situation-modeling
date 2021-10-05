@@ -189,16 +189,17 @@ def get_dataset_from_file(file_name, AUG, fraction):
 
 
 import pickle
-def get_data(path, FLAG, AUG, re_extract = False, fraction = [0.70, 0.10, 0.20], OPT="train"):
+def get_data(path, FLAG, AUG, re_extract = False, fraction = [0.70, 0.10, 0.20], OPT="train", SAVE = False):
     
     if re_extract:
         train_dataset, val_dataset, test_dataset = get_dataset_from_file(path, AUG, fraction)
-        with open("/mnt/SSD2/pholur/CTs/Pickles/train_dataset.pkl", 'wb') as f:
-            pickle.dump(train_dataset, f)
-        with open("/mnt/SSD2/pholur/CTs/Pickles/val_dataset.pkl", 'wb') as f:
-            pickle.dump(val_dataset, f)
-        with open("/mnt/SSD2/pholur/CTs/Pickles/test_dataset.pkl", 'wb') as f:
-            pickle.dump(test_dataset, f)
+        if SAVE:
+            with open("/mnt/SSD2/pholur/CTs/Pickles/train_dataset.pkl", 'wb') as f:
+                pickle.dump(train_dataset, f)
+            with open("/mnt/SSD2/pholur/CTs/Pickles/val_dataset.pkl", 'wb') as f:
+                pickle.dump(val_dataset, f)
+            with open("/mnt/SSD2/pholur/CTs/Pickles/test_dataset.pkl", 'wb') as f:
+                pickle.dump(test_dataset, f)
     else:
         train_dataset = pickle.load(open("/mnt/SSD2/pholur/CTs/Pickles/train_dataset.pkl", "rb"))
         val_dataset = pickle.load(open("/mnt/SSD2/pholur/CTs/Pickles/val_dataset.pkl", "rb"))

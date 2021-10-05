@@ -12,7 +12,7 @@ model.train()
 
 
 PATH = INPUT_DATA_PATH
-train_loader, val_loader = get_data(PATH, FLAG, AUG, REEXTRACT, FRACTION)
+train_loader, val_loader = get_data(PATH, FLAG, AUG, REEXTRACT, FRACTION, OPT, SAVE)
 
 print(model)
 ## Maybe freeze a few layers y'know... ask Pavan if you want to do that.
