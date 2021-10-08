@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "train.py", line 15, in <module>
+    train_loader, val_loader = get_data(PATH, FLAG, AUG, REEXTRACT, FRACTION, OPT, SAVE)
+  File "/home/pholur/Situation_Modeling/data.py", line 194, in get_data
+    train_dataset, val_dataset, test_dataset = get_dataset_from_file(path, AUG, fraction)
+  File "/home/pholur/Situation_Modeling/data.py", line 178, in get_dataset_from_file
+    train_dataset = pull_for_ids(df_train, df_train['PostID'].unique(), "train")
+  File "/home/pholur/Situation_Modeling/data.py", line 146, in pull_for_ids
+    total_augmented_posts = [main_post, *data_aug(main_post, real_AUG)]
+  File "/home/pholur/Situation_Modeling/data_aug.py", line 11, in data_aug
+    augmented_text = aug.augment(text, n=AUG)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/nlpaug/base_augmenter.py", line 95, in augment
+    result = action_fx(clean_data)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/nlpaug/augmenter/word/context_word_embs.py", line 256, in insert
+    outputs = self.model.predict(masked_texts, target_words=None, n=2)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/nlpaug/model/lang_models/fill_mask_transformers.py", line 74, in predict
+    predict_result = self.model(texts[i:i+self.batch_size])
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/pipelines/fill_mask.py", line 222, in __call__
+    outputs = super().__call__(inputs, **kwargs)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/pipelines/base.py", line 908, in __call__
+    outputs = [output for output in final_iterator]
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/pipelines/base.py", line 908, in <listcomp>
+    outputs = [output for output in final_iterator]
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/pipelines/base.py", line 632, in __next__
+    processed = self.infer(item, **self.params)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/pipelines/fill_mask.py", line 127, in postprocess
+    tokens = input_ids.numpy()
+TypeError: can't convert cuda:2 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.

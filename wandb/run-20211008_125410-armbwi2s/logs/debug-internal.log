@@ -1,0 +1,32 @@
+2021-10-08 12:54:10,915 INFO    MainThread:21837 [internal.py:wandb_internal():89] W&B internal server running at pid: 21837, started at: 2021-10-08 12:54:10.915378
+2021-10-08 12:54:10,918 DEBUG   HandlerThread:21837 [handler.py:handle_request():126] handle_request: check_version
+2021-10-08 12:54:10,920 INFO    WriterThread:21837 [datastore.py:open_for_write():77] open: /home/pholur/Situation_Modeling/wandb/run-20211008_125410-armbwi2s/run-armbwi2s.wandb
+2021-10-08 12:54:10,922 DEBUG   SenderThread:21837 [sender.py:send():185] send: header
+2021-10-08 12:54:10,922 DEBUG   SenderThread:21837 [sender.py:send_request():199] send_request: check_version
+2021-10-08 12:54:10,967 DEBUG   SenderThread:21837 [sender.py:send():185] send: run
+2021-10-08 12:54:11,105 DEBUG   HandlerThread:21837 [handler.py:handle_request():126] handle_request: run_start
+2021-10-08 12:54:11,107 INFO    SenderThread:21837 [dir_watcher.py:__init__():169] watching files in: /home/pholur/Situation_Modeling/wandb/run-20211008_125410-armbwi2s/files
+2021-10-08 12:54:11,107 INFO    SenderThread:21837 [sender.py:_start_run_threads():749] run started: armbwi2s with start time 1633722850
+2021-10-08 12:54:11,107 DEBUG   SenderThread:21837 [sender.py:send():185] send: summary
+2021-10-08 12:54:11,108 INFO    SenderThread:21837 [sender.py:_save_file():879] saving file wandb-summary.json with policy end
+2021-10-08 12:54:11,940 DEBUG   HandlerThread:21837 [meta.py:__init__():40] meta init
+2021-10-08 12:54:11,940 DEBUG   HandlerThread:21837 [meta.py:__init__():54] meta init done
+2021-10-08 12:54:11,940 DEBUG   HandlerThread:21837 [meta.py:probe():211] probe
+2021-10-08 12:54:11,947 DEBUG   HandlerThread:21837 [meta.py:_setup_git():201] setup git
+2021-10-08 12:54:11,978 DEBUG   HandlerThread:21837 [meta.py:_setup_git():208] setup git done
+2021-10-08 12:54:11,978 DEBUG   HandlerThread:21837 [meta.py:_save_pip():58] save pip
+2021-10-08 12:54:11,979 DEBUG   HandlerThread:21837 [meta.py:_save_pip():72] save pip done
+2021-10-08 12:54:11,979 DEBUG   HandlerThread:21837 [meta.py:_save_conda():79] save conda
+2021-10-08 12:54:12,109 INFO    Thread-8  :21837 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20211008_125410-armbwi2s/files/wandb-summary.json
+2021-10-08 12:54:12,110 INFO    Thread-8  :21837 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20211008_125410-armbwi2s/files/requirements.txt
+2021-10-08 12:54:12,111 INFO    Thread-8  :21837 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20211008_125410-armbwi2s/files/conda-environment.yaml
+2021-10-08 12:54:15,773 DEBUG   HandlerThread:21837 [meta.py:_save_conda():87] save conda done
+2021-10-08 12:54:15,773 DEBUG   HandlerThread:21837 [meta.py:probe():249] probe done
+2021-10-08 12:54:15,800 DEBUG   SenderThread:21837 [sender.py:send():185] send: files
+2021-10-08 12:54:15,800 INFO    SenderThread:21837 [sender.py:_save_file():879] saving file wandb-metadata.json with policy now
+2021-10-08 12:54:15,810 DEBUG   HandlerThread:21837 [handler.py:handle_request():126] handle_request: stop_status
+2021-10-08 12:54:15,810 DEBUG   SenderThread:21837 [sender.py:send_request():199] send_request: stop_status
+2021-10-08 12:54:16,109 INFO    Thread-8  :21837 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/pholur/Situation_Modeling/wandb/run-20211008_125410-armbwi2s/files/conda-environment.yaml
+2021-10-08 12:54:16,110 INFO    Thread-8  :21837 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20211008_125410-armbwi2s/files/output.log
+2021-10-08 12:54:16,110 INFO    Thread-8  :21837 [dir_watcher.py:_on_file_created():217] file/dir created: /home/pholur/Situation_Modeling/wandb/run-20211008_125410-armbwi2s/files/wandb-metadata.json
+2021-10-08 12:54:16,144 INFO    Thread-11 :21837 [upload_job.py:push():137] Uploaded file /tmp/tmpn4t8axd8wandb/xtfsb7uc-wandb-metadata.json

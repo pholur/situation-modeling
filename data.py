@@ -7,10 +7,6 @@ import pandas as pd
 import sys
 from collections import defaultdict
 import re
-# maybe we can make it a regression task?
-MAPPING = {"$AnswerA":0, "$AnswerB":2, "$AnswerC":1}
-REVERSE_MAPPING = {0:"$AnswerA", 1:"$AnswerC", 2:"$AnswerB"}
-
 
 
 class ConspiracyDataset(Dataset):
@@ -127,6 +123,8 @@ def get_dataset_from_file(file_name, AUG, fraction):
     df_train_, df_test = train_test_split(df_raw, test_size=fraction[2])
     df_train, df_val = train_test_split(df_train_, test_size=fraction[1])
     df_train.to_csv(RAW_TRAIN_DATA_PATH, index=False)
+    df_val.to_csv(RAW_VAL_DATA_PATH, index=False)
+    df_test.to_csv(RAW_TEST_DATA_PATH, index=False)
 
     def pull_for_ids(df, unique_posts_ids, choice):
         all_data = defaultdict(list)
