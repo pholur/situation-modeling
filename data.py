@@ -126,6 +126,7 @@ def get_dataset_from_file(file_name, AUG, fraction):
     ### This approach cuts a validation set from the whole dataset.
     df_train_, df_test = train_test_split(df_raw, test_size=fraction[2])
     df_train, df_val = train_test_split(df_train_, test_size=fraction[1])
+    df_train.to_csv(RAW_TRAIN_DATA_PATH, index=False)
 
     def pull_for_ids(df, unique_posts_ids, choice):
         all_data = defaultdict(list)
