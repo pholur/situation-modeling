@@ -1,7 +1,7 @@
 from sklearn.base import BaseEstimator, ClassifierMixin, TransformerMixin
 from sklearn.pipeline import make_pipeline
 import numpy as np
-
+import xgboost as xgb
 
 class MyOwnTransformer(BaseEstimator, TransformerMixin):
     def fit(self, X, y=None):
@@ -114,7 +114,8 @@ class SemiRandom_Stopword_Lemmatized_Lower_WordMatching(BaseEstimator, Classifie
                 return_set.append(np.argmax(self.classes_[x]))
         return np.array(return_set)
 
-######################################## Model 4 #######################################
+
+######################################## Model 5 #######################################
 
 from imports import *
 from data import *
@@ -135,7 +136,7 @@ import nltk
 nlp = spacy.load('en_core_web_sm')
 
 from data import *
-def return_insiders_and_outsiders(text, option_display=False, sample_text=None):
+def return_insiders_and_outsiders(text, option_display=False, sample_text=None, CBOW_shortcut=False):
     text = text.lower()
     text = clean_text(text)
     doc = nlp(text)
@@ -150,6 +151,10 @@ def return_insiders_and_outsiders(text, option_display=False, sample_text=None):
         add_np_text.append(npy.text)
         if npy.text == sample_text:
             FLAG = True
+
+        if CBOW_shortcut: # this is for the CBOW model
+            return (npy.start_char, npy.end_char)
+
         spans.append((npy.start_char, npy.end_char))
 
     test_encodings, tokens = tokenization([text], True) # you can print the tokens here for debugging
@@ -187,12 +192,17 @@ def return_insiders_and_outsiders(text, option_display=False, sample_text=None):
         # in case our model cannot find the chunk
         start_index = text.find(sample_text)
         end_index = start_index + len(sample_text)
+
+        if CBOW_shortcut:
+            return (start_index, end_index)
+
         count_votes = []
 
         for i,index in enumerate(predictions_argmax):
 
             current_token_mapping = offset_mappings[i]
             if current_token_mapping[1] >= start_index and current_token_mapping[0] <= end_index: # if the token is in the span of a chunk
+                # incase you want to add weights to each vote: we didn't find it useful.
                 if index == 2:
                     count_votes.extend([index])
                 elif index == 1:
@@ -226,6 +236,120 @@ def return_insiders_and_outsiders(text, option_display=False, sample_text=None):
             dictionary_map[np_all] = labels[ent['label']]
         return dictionary_map
 
+
+
+####################################### Model 4 ########################################
+import pickle
+class CBOW(BaseEstimator, ClassifierMixin):
+    '''
+    Support currently only include GLoVE 300d vectors.
+    Supports model: XGBOOST
+    '''
+
+    def __init__(self, word_embedding, word_embedding_size, window_size, model):
+        if word_embedding == "glove":
+            self.word_embeddings = {}
+            try:
+                # read pickle
+                with open("/mnt/SSD2/pholur/CTs/External_DB/glove_embeddings.pkl", "rb") as f:
+                    self.word_embeddings = pickle.load(f)
+            except:
+                with open("/mnt/SSD2/pholur/CTs/External_DB/glove.42B.300d.txt", 'r') as f:
+                    for line in f:
+                        values = line.split()
+                        word = values[0]
+                        vector = np.asarray(values[1:], "float32")
+                        self.word_embeddings[word] = vector
+                #pickle save the word embeddings
+                with open("/mnt/SSD2/pholur/CTs/External_DB/glove_embeddings.pkl", 'wb') as f:
+                    pickle.dump(self.word_embeddings, f)
+        else:
+            print("Warning! Current Embedding model is not supported.")
+
+        self.word_embedding_size = word_embedding_size
+        self.window_size = window_size
+        self.model_choice = model
+
+
+    def fit(self, X_rep, y):
+        X, X_ = X_rep[0], X_rep[1]
+        
+        if self.model_choice == "xgboost":
+            self.model = xgb.XGBClassifier()
+            train_data = self._HELPER_assemble_features(X, X_)
+            self.model.fit(train_data, y)
+        else:
+            print("Warning! Current Model is not supported.")
+
+
+    def predict(self, X_rep):
+        X, X_ = X_rep[0], X_rep[1]
+        test_data = self._HELPER_assemble_features(X, X_)
+        return self.model.predict(test_data)
+    
+
+    def _HELPER_assemble_features(self, X, X_):
+        data = np.zeros((len(X), self.word_embedding_size))
+        for i,(x,x_) in enumerate(zip(X,X_)):
+            indices = return_insiders_and_outsiders(x_, False, x, CBOW_shortcut=True)
+            words = self._get_context_words(x_, indices[0], indices[1], self.window_size)
+            total_vector = self._get_average_vector_for_words(words)
+            data[i,:] = total_vector
+        return data
+
+
+    def _get_context_words(self, post, start, end, window_size):
+        '''
+        Get the context words of a word.
+        '''
+        post_start = post[:start]
+        post_end = post[end:]
+
+        def _fixup_part_post(post_new, OPTION):
+            post_new = clean_text(post_new)
+            post_new = post_new.lower()
+            post_new = clean2(post_new) # can we do a better job with the lemmatization?
+            post_new = nltk.word_tokenize(post_new)
+            if OPTION == "start":
+                post_new = post_new[-min(window_size, len(post_new)):]
+            elif OPTION == "end":
+                post_new = post_new[:min(window_size, len(post_new))]
+            return post_new
+        
+        post_start_words = _fixup_part_post(post_start, "start")
+        post_end_words = _fixup_part_post(post_end, "end")
+        all_words = post_start_words + post_end_words
+        return all_words
+
+
+
+    def _get_vector_for_word(self, word):
+        # return a 300 dim vector for word
+        try:
+            return self.word_embeddings[word].reshape(1, -1), True
+        except:
+            return np.zeros((1, self.word_embedding_size)), False
+
+    def _get_average_vector_for_words(self, words):
+        # return a 300 dim vector for words
+        total_vector = np.zeros((1, self.word_embedding_size))
+        count = 0
+        for word in words:
+            vector, OPT = self._get_vector_for_word(word)
+            if OPT == True:
+                total_vector += vector
+                count += 1
+        if count == 0:
+            return np.zeros((1, self.word_embedding_size))
+        return total_vector/count
+
+
+
+
+
+
+####################################### Model 5 ########################################
+
 class OurModel(BaseEstimator, ClassifierMixin):
     def fit(self, X, y):
         self.classes_ = np.unique(y)
@@ -254,24 +378,35 @@ class OurModel(BaseEstimator, ClassifierMixin):
 
 
 models = {"RANDOM":RandomEntityClassifier(), \
-    "DET0": DeterministicClassifier0(), \
-    "DET1": DeterministicClassifier1(), \
-    "DET2": DeterministicClassifier2(), \
-    "SEMI1":SemiRandomWordMatching(), \
-    "SEMI2":SemiRandom_Stopword_Lemmatized_Lower_WordMatching(), \
+    "DET_0": DeterministicClassifier0(), \
+    "DET_1": DeterministicClassifier1(), \
+    "DET_2": DeterministicClassifier2(), \
+    "SEMI1_lemm":SemiRandom_Stopword_Lemmatized_Lower_WordMatching(), \
+    "SEMI2_exact":SemiRandomWordMatching(), \
+    "CBOW-1": CBOW("glove", 300, 1, "xgboost"), \
+    "CBOW-2": CBOW("glove", 300, 2, "xgboost"), \
+    "CBOW-5": CBOW("glove", 300, 5, "xgboost"), \
     "OUR MODEL": None}
 
-def get_score(train_data, test_data, model, context):
+def get_score(train_data, test_data, model, context, context_train):
     train_X, train_y = train_data
     test_X, test_y = test_data
-    if model != "OUR MODEL":
+    if model not in ["OUR MODEL","CBOW-1", "CBOW-2", "CBOW-5"]:
         pipe = make_pipeline(MyOwnTransformer(), models[model])
         pipe.fit(train_X, train_y)
-        pipe_score = pipe.score(test_X, test_y)
-        return pipe_score
-    else:
+        y_pred = pipe.predict(test_X)
+        #pipe_score = pipe.score(test_X, test_y)
+        return y_pred
+    elif model == "OUR MODEL":
         pipe = make_pipeline(MyOwnTransformer(), OurModel())
         pipe.fit(train_X, train_y)
-        pipe_score = pipe.score([test_X, context], test_y)
-        return pipe_score
+        predictions = pipe.predict([test_X, context])
+        #pipe_score = pipe.score([test_X, context], test_y)
+        return predictions
+    elif "CBOW" in model:
+        pipe = make_pipeline(MyOwnTransformer(), models[model])
+        pipe.fit([train_X, context_train], train_y)
+        predictions = pipe.predict([test_X, context])
+        #pipe_score = pipe.score([test_X, context], test_y)
+        return predictions
 
