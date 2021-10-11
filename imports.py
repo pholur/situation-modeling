@@ -10,12 +10,12 @@ torch.manual_seed(0)
 os.environ['TRANSFORMERS_CACHE'] = '/mnt/SSD2/pholur/cache/'
 #CORE_MODEL = 'roberta-large'
 CORE_MODEL = 'roberta-base'
-#CORE_MODEL = 'distilroberta-base'
-
 #CORE_MODEL = 'distilbert-base-uncased'
+
+
 # os.environ['PYTHONHASHSEED'] = '0'
 # os.environ['CUBLAS_WORKSPACE_CONFIG'] = ":4096:8"
-#torch.set_deterministic(True)
+# torch.set_deterministic(True)
 
 g = torch.Generator()
 g.manual_seed(0)
@@ -50,6 +50,11 @@ INPUT_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1008.csv"
 RAW_TRAIN_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1008_raw_train.csv"
 RAW_TEST_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1008_raw_test.csv"
 RAW_VAL_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1008_raw_val.csv"
+
+# INPUT_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1008.csv"
+# RAW_TRAIN_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1008_raw_train.csv"
+# RAW_TEST_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1008_raw_test.csv"
+# RAW_VAL_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1008_raw_val.csv"
 DEPOSIT_PATH = "./ShortTerm_Results/"
 
 # CUDAs
@@ -65,4 +70,7 @@ MAPPING = {"$AnswerA":0, "$AnswerB":2, "$AnswerC":1}
 REVERSE_MAPPING = {0:"$AnswerA", 1:"$AnswerC", 2:"$AnswerB"}
 
 # Mode
-OPT = "train" # test
+OPT = "test"
+
+MODEL_IN_TESTING = "/mnt/SSD2/pholur/CTs/checkpoints/Day_1008_Insider_Outsider_20_14301.pt"
+
