@@ -5,11 +5,10 @@ from imports import *
 import nlpaug.augmenter.word as naw
 
 aug = naw.ContextualWordEmbsAug(
-        model_path='bert-base-uncased', action="insert", device=device_for_aug)
+        model_path='bert-base-uncased', action="insert", device=device_for_aug, aug_min=2, aug_max=5)
 
-def data_aug(text, AUG):
+def data_aug(text, AUG=10):
     augmented_text = aug.augment(text, n=AUG)
     return augmented_text
 
-#data_aug("I am a student.")
-#returns ['i am a literature student.', 'i am a business student.', 'i specifically am a student.', 'like i am a student.', 'again i am a student.', 'i am only a student.', 'i am a lab student.', 'i think am a student.', 'i sure am a student.', 'oh i am a student.']
+# print(data_aug("I am a student."))

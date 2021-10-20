@@ -49,7 +49,8 @@ def generate_full_labels(ordered_posts, dataset, train_encodings, flag = 0):
 
                 doc_enc_labels[(arr_offset[:,0] <= start_point) & (arr_offset[:,1] >= start_point)] = label
                 doc_enc_labels[(arr_offset[:,0] <= end_point) & (arr_offset[:,1] >= end_point)] = label
-                doc_enc_labels[(arr_offset[:,0] >= start_point) & (arr_offset[:,1] <= end_point)] = label        
+                doc_enc_labels[(arr_offset[:,0] >= start_point) & (arr_offset[:,1] <= end_point)] = label 
+                doc_enc_labels[(arr_offset[:,0] <= start_point) & (arr_offset[:,1] >= end_point)] = label       
             
             if flag == 1:
                 new_ordered_posts.append(post)
@@ -108,6 +109,8 @@ def clean_text(text):
     return text
 
 from sklearn.model_selection import train_test_split
+import spacy
+nlp = spacy.load('en_core_web_sm')
 
 def get_dataset_from_file(file_name, AUG, fraction):
     df_raw = pd.read_csv(file_name)
@@ -122,10 +125,13 @@ def get_dataset_from_file(file_name, AUG, fraction):
     ### This approach cuts a validation set from the whole dataset.
     df_train_, df_test = train_test_split(df_raw, test_size=fraction[2])
     df_train, df_val = train_test_split(df_train_, test_size=fraction[1])
+    print("Shapes of Data: ", df_train.shape, df_val.shape, df_test.shape)
+    
     df_train.to_csv(RAW_TRAIN_DATA_PATH, index=False)
     df_val.to_csv(RAW_VAL_DATA_PATH, index=False)
     df_test.to_csv(RAW_TEST_DATA_PATH, index=False)
 
+    from tqdm import tqdm
     def pull_for_ids(df, unique_posts_ids, choice):
         all_data = defaultdict(list)
         if choice == "train":
@@ -136,7 +142,7 @@ def get_dataset_from_file(file_name, AUG, fraction):
             real_AUG = AUG[2]
 
         count = 0
-        for id_ in unique_posts_ids:
+        for id_ in tqdm(unique_posts_ids):
             temp_df = df[df['PostID'] == id_]
             main_post = str(temp_df['Post'].iloc[0]).lower()
             main_post = clean_text(main_post)
@@ -154,19 +160,37 @@ def get_dataset_from_file(file_name, AUG, fraction):
                         noun_phrase = str(noun_phrase).lower()
                         noun_phrase = clean_text(noun_phrase)
                         
+
+                        # you have to align it this way: what happens if spacy returns "vaccine" and "the vaccine"? Boost the number of tokens some more.
+                        # TODO: Replace this with word chunk detection.
                         if len(noun_phrase.split(" ")) < 2:
-                            try:
-                                # single word case, this still escapes some tokens that might need resolution.
-                                # the last index is exclusive
-                                indices = [(m.start(0)+1, m.end(0)) for m in re.finditer(" " + noun_phrase, post_re)]
-                                indices.extend([(m.start(0), m.end(0)-1) for m in re.finditer(noun_phrase + " ", post_re)])
-                            except:
-                                indices = [(m.start(0), m.end(0)) for m in re.finditer(noun_phrase, post_re)]
+
+                            indices = []
+                            my_doc = nlp(post_re)
+                            token_list = []
+                            for token in my_doc:
+                                if token.text == noun_phrase:
+                                    indices.append((token.idx, token.idx + len(token.text)))
+                            
+                            if indices == []:
+                                res = re.finditer(" " + noun_phrase, post_re)
+                                if res != []:
+                                    indices.extend([(m.start(0)+1, m.end(0)) for m in res])
+                                
+                                res = re.finditer(noun_phrase + " ", post_re)
+                                if res != []:
+                                    indices.extend([(m.start(0), m.end(0)-1) for m in res])
+
+                                    res = re.finditer(noun_phrase, post_re)
+                                    if res != []:
+                                        indices.extend([(m.start(0), m.end(0)) for m in res])
+
                         else:
                             indices = [(m.start(0), m.end(0)) for m in re.finditer(noun_phrase, post_re)]
                     except:
                         continue
-
+                    
+                    indices = list(set(indices))
                     # all data will contain the posts as keys.
                     # for each key, we will have a list of tuples.
                     # each tuple will contain  a list of the start and end indices of the noun phrase in the post as the first element.

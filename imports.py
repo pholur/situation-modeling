@@ -33,23 +33,23 @@ def seed_worker(worker_id):
 
 # OPTIONS
 FLAG = 1 # 1 for single entity in single sample, 0 for all entities in single sample
-EPOCHS = 30#20#4
+EPOCHS = 35#20#4
 BATCH_SIZE = 64#128#16
 AUG = [20,0,0] # has to be greater than 1
-FRACTION = [0.6, 0.2, 0.2]
+FRACTION = [0.8, 0.1, 0.1]
 REEXTRACT = True
 SAVE = True # works with reextract flag
 LEARNING_RATE = 1e-6#1e-5 #1e-4 seems too high #5e-5 seems too high
-FROZEN_LAYERS = -2 # -1
+FROZEN_LAYERS = -3 # -2 # -1
 
 # SAVES
-CHECKPOINT_PATH = '/mnt/SSD2/pholur/CTs/checkpoints/Day_1008_'
+CHECKPOINT_PATH = '/mnt/SSD2/pholur/CTs/checkpoints/Day_1017_'
 ROOT_NAME = 'Insider_Outsider_'
 #INPUT_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_0922.csv"
-INPUT_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1008.csv"
-RAW_TRAIN_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1008_raw_train.csv"
-RAW_TEST_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1008_raw_test.csv"
-RAW_VAL_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1008_raw_val.csv"
+INPUT_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1017.csv"
+RAW_TRAIN_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1017_raw_train.csv"
+RAW_TEST_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1017_raw_test.csv"
+RAW_VAL_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1017_raw_val.csv"
 
 # INPUT_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1008.csv"
 # RAW_TRAIN_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1008_raw_train.csv"
@@ -72,5 +72,4 @@ REVERSE_MAPPING = {0:"$AnswerA", 1:"$AnswerC", 2:"$AnswerB"}
 # Mode
 OPT = "test"
 
-MODEL_IN_TESTING = "/mnt/SSD2/pholur/CTs/checkpoints/Day_1008_Insider_Outsider_20_14301.pt"
-
+MODEL_IN_TESTING = "/mnt/SSD2/pholur/CTs/checkpoints/Day_1017_Insider_Outsider_12_17277.pt"

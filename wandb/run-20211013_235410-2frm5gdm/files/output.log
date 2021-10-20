@@ -1,0 +1,19 @@
+
+  0%|                                                                                                                    | 0/1229 [00:00<?, ?it/s]Process Process-562:
+Traceback (most recent call last):
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/multiprocessing/process.py", line 290, in _bootstrap
+    util._run_after_forkers()
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/multiprocessing/util.py", line 132, in _run_after_forkers
+    func(obj)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/multiprocessing/synchronize.py", line 72, in _after_fork
+    obj._semlock._after_fork()
+KeyboardInterrupt
+Exception ignored in: <function _releaseLock at 0x7f45411847b8>
+Traceback (most recent call last):
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/logging/__init__.py", line 221, in _releaseLock
+    def _releaseLock():
+KeyboardInterrupt
+Exception ignored in: <function _releaseLock at 0x7f45411847b8>
+Traceback (most recent call last):
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/logging/__init__.py", line 221, in _releaseLock
+    def _releaseLock():

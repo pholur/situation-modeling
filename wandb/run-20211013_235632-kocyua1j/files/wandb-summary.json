@@ -1,0 +1,1 @@
+{"loss": 0.9482743144035339, "epoch": 34, "step": 680, "index": 23835, "_runtime": 97462, "_timestamp": 1634292054, "_step": 26249, "val_loss": 0.8508753180503845, "_wandb": {"runtime": 97465}}
