@@ -32,7 +32,12 @@ for epoch in range(EPOCHS):
         input_ids = batch['input_ids'].to(device)
         attention_mask = batch['attention_mask'].to(device)
         labels = batch['labels'].to(device)
-        #labels = labels[torch.randperm(len(labels))]
+
+        # #labels = labels[torch.randperm(len(labels))]
+        # print(input_ids)
+        # print(labels)
+        # exit()
+        
         outputs = model(input_ids, attention_mask=attention_mask, labels=labels)
         loss = outputs[0]
         wandb.log({'loss': loss, 'epoch': epoch, 'step': i, 'index': index})

@@ -52,6 +52,20 @@ def generate_full_labels(ordered_posts, dataset, train_encodings, flag = 0):
                 doc_enc_labels[(arr_offset[:,0] >= start_point) & (arr_offset[:,1] <= end_point)] = label 
                 doc_enc_labels[(arr_offset[:,0] <= start_point) & (arr_offset[:,1] >= end_point)] = label       
             
+            # some of the padding tokens have a (0,0) reverse mapping and were fuqing me over.
+            # this is a hack to get rid of them
+            for rehash in range(len(doc_enc_labels)):
+                if arr_offset[rehash,0] == 0 and arr_offset[rehash,1] == 0:
+                    doc_enc_labels[rehash] = -100
+
+            # print(doc_enc_labels)
+            # print(indices)
+            # print(label)
+            # print(post)
+            # print(doc_offset)
+            # print(dataset[post])
+            # exit()
+
             if flag == 1:
                 new_ordered_posts.append(post)
                 encoded_labels_other.append(doc_enc_labels.tolist())
@@ -98,6 +112,7 @@ def get_data_loaded(data_class, batch_size=BATCH_SIZE, num_workers = 0):
                         num_workers=num_workers,
                         worker_init_fn=seed_worker,
                         generator=g,
+                        shuffle=True,
                         pin_memory=True
                     )
 

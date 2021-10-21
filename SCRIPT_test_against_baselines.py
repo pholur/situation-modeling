@@ -15,8 +15,10 @@ if __name__ == "__main__":
     # setting up the data for the primitive baselines
     df_train = pd.read_csv(RAW_TRAIN_DATA_PATH) # without validation: Apples and oranges comparison otherwise
     df_test = pd.read_csv(RAW_TEST_DATA_PATH)
+    df_validation = pd.read_csv(RAW_VAL_DATA_PATH)
 
     df_train = df_train[["Post", "NP", "sentiment"]]
+    df_train.append(df_validation[["Post", "NP", "sentiment"]])
     df_test = df_test[["Post", "NP", "sentiment"]]
 
     df_train = df_train.dropna()

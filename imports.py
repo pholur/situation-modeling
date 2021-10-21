@@ -8,8 +8,8 @@ import torch
 import os
 torch.manual_seed(0)
 os.environ['TRANSFORMERS_CACHE'] = '/mnt/SSD2/pholur/cache/'
-#CORE_MODEL = 'roberta-large'
-CORE_MODEL = 'roberta-base'
+CORE_MODEL = 'roberta-large'
+#CORE_MODEL = 'roberta-base'
 #CORE_MODEL = 'distilbert-base-uncased'
 
 
@@ -33,14 +33,14 @@ def seed_worker(worker_id):
 
 # OPTIONS
 FLAG = 1 # 1 for single entity in single sample, 0 for all entities in single sample
-EPOCHS = 35#20#4
+EPOCHS = 10#20#4
 BATCH_SIZE = 64#128#16
 AUG = [20,0,0] # has to be greater than 1
 FRACTION = [0.8, 0.1, 0.1]
-REEXTRACT = True
-SAVE = True # works with reextract flag
-LEARNING_RATE = 1e-6#1e-5 #1e-4 seems too high #5e-5 seems too high
-FROZEN_LAYERS = -3 # -2 # -1
+REEXTRACT = False
+SAVE = False # works with reextract flag
+LEARNING_RATE = 1e-6 #[[1e-6]] #1e-5 #1e-4 seems too high #5e-5 seems too high
+FROZEN_LAYERS = -6 #-3 # -2 # -1d
 
 # SAVES
 CHECKPOINT_PATH = '/mnt/SSD2/pholur/CTs/checkpoints/Day_1017_'
@@ -60,7 +60,7 @@ DEPOSIT_PATH = "./ShortTerm_Results/"
 # CUDAs
 preferred_cuda = "cuda:1"
 preferred_cuda_test = "cuda:1"
-device_for_aug = "cuda:2"
+device_for_aug = "cuda:0"
 
 # Labels
 labels = {"insider":0, "outsider":2, "idk":1}
@@ -70,6 +70,7 @@ MAPPING = {"$AnswerA":0, "$AnswerB":2, "$AnswerC":1}
 REVERSE_MAPPING = {0:"$AnswerA", 1:"$AnswerC", 2:"$AnswerB"}
 
 # Mode
-OPT = "test"
+OPT = "train"
 
-MODEL_IN_TESTING = "/mnt/SSD2/pholur/CTs/checkpoints/Day_1017_Insider_Outsider_12_17277.pt"
+MODEL_IN_TESTING = "/mnt/SSD2/pholur/CTs/checkpoints/Day_1017_Insider_Outsider_5_7974.pt"
+#MODEL_IN_TESTING = "/mnt/SSD2/pholur/CTs/checkpoints/Day_1017_Insider_Outsider_0_1329.pt"
