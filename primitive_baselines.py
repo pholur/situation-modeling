@@ -190,8 +190,24 @@ def return_insiders_and_outsiders(text, option_display=False, sample_text=None, 
                 print("Something's wrong with the span intersection.")
     else:
         # in case our model cannot find the chunk
-        start_index = text.find(sample_text)
-        end_index = start_index + len(sample_text)
+        start_index, end_index = None, None
+        res = re.finditer(" " + sample_text, text)
+        if res != []:
+            for m in res:
+                start_index, end_index = m.start(0)+1, m.end(0)
+                break
+        
+        res = re.finditer(sample_text + " ", text)
+        if res != [] and start_index == None:
+            for m in res:
+                start_index, end_index = m.start(0), m.end(0)-1
+                break
+
+        res = re.finditer(sample_text, text)
+        if res != [] and start_index == None:
+            for m in res:
+                start_index, end_index = m.start(0), m.end(0)
+                break
 
         if CBOW_shortcut:
             return (start_index, end_index)

@@ -196,9 +196,11 @@ def get_dataset_from_file(file_name, AUG, fraction):
                                 if res != []:
                                     indices.extend([(m.start(0), m.end(0)-1) for m in res])
 
-                                    res = re.finditer(noun_phrase, post_re)
-                                    if res != []:
-                                        indices.extend([(m.start(0), m.end(0)) for m in res])
+                                res = re.finditer(noun_phrase, post_re)
+                                if indices != []:
+                                    if noun_phrase == 's':
+                                        continue
+                                    indices.extend([(m.start(0), m.end(0)) for m in res])
 
                         else:
                             indices = [(m.start(0), m.end(0)) for m in re.finditer(noun_phrase, post_re)]

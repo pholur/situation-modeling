@@ -40,7 +40,7 @@ FRACTION = [0.8, 0.1, 0.1]
 REEXTRACT = False
 SAVE = False # works with reextract flag
 LEARNING_RATE = 1e-6 #[[1e-6]] #1e-5 #1e-4 seems too high #5e-5 seems too high
-FROZEN_LAYERS = -6 #-3 # -2 # -1d
+FROZEN_LAYERS = -1#-6 #-3 # -2 # -1d
 
 # SAVES
 CHECKPOINT_PATH = '/mnt/SSD2/pholur/CTs/checkpoints/Day_1017_'
@@ -58,9 +58,9 @@ RAW_VAL_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1017_raw_val.csv"
 DEPOSIT_PATH = "./ShortTerm_Results/"
 
 # CUDAs
-preferred_cuda = "cuda:1"
-preferred_cuda_test = "cuda:1"
-device_for_aug = "cuda:0"
+preferred_cuda = "cuda:5"
+preferred_cuda_test = "cuda:5"
+device_for_aug = "cuda:4"
 
 # Labels
 labels = {"insider":0, "outsider":2, "idk":1}
@@ -70,7 +70,8 @@ MAPPING = {"$AnswerA":0, "$AnswerB":2, "$AnswerC":1}
 REVERSE_MAPPING = {0:"$AnswerA", 1:"$AnswerC", 2:"$AnswerB"}
 
 # Mode
-OPT = "train"
+OPT = "test"
+PAIR_TEST_WITH_LEAVE_OUT = True
 
-MODEL_IN_TESTING = "/mnt/SSD2/pholur/CTs/checkpoints/Day_1017_Insider_Outsider_5_7974.pt"
+MODEL_IN_TESTING = "/mnt/SSD2/pholur/CTs/checkpoints/Day_1017_Insider_Outsider_8_11961.pt"
 #MODEL_IN_TESTING = "/mnt/SSD2/pholur/CTs/checkpoints/Day_1017_Insider_Outsider_0_1329.pt"
