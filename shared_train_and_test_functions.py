@@ -1,7 +1,7 @@
 from transformers import DistilBertTokenizerFast, AutoTokenizer, BertTokenizer, BertTokenizerFast, PreTrainedTokenizerFast, RobertaTokenizerFast
 from imports import *
-tokenizer = RobertaTokenizerFast.from_pretrained(CORE_MODEL)
-#tokenizer = DistilBertTokenizerFast.from_pretrained(CORE_MODEL)
+#tokenizer = RobertaTokenizerFast.from_pretrained(CORE_MODEL)
+tokenizer = DistilBertTokenizerFast.from_pretrained(CORE_MODEL)
 
 
 def tokenization(train_texts, FLAG=False):

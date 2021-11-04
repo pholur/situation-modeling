@@ -8,9 +8,9 @@ import torch
 import os
 torch.manual_seed(0)
 os.environ['TRANSFORMERS_CACHE'] = '/mnt/SSD2/pholur/cache/'
-CORE_MODEL = 'roberta-large'
+#CORE_MODEL = 'roberta-large'
 #CORE_MODEL = 'roberta-base'
-#CORE_MODEL = 'distilbert-base-uncased'
+CORE_MODEL = 'distilbert-base-uncased'
 
 
 # os.environ['PYTHONHASHSEED'] = '0'
@@ -33,23 +33,28 @@ def seed_worker(worker_id):
 
 # OPTIONS
 FLAG = 1 # 1 for single entity in single sample, 0 for all entities in single sample
-EPOCHS = 10#20#4
+EPOCHS = 20#20#4
 BATCH_SIZE = 64#128#16
 AUG = [20,0,0] # has to be greater than 1
 FRACTION = [0.8, 0.1, 0.1]
 REEXTRACT = False
 SAVE = False # works with reextract flag
 LEARNING_RATE = 1e-6 #[[1e-6]] #1e-5 #1e-4 seems too high #5e-5 seems too high
-FROZEN_LAYERS = -1#-6 #-3 # -2 # -1d
+FROZEN_LAYERS = -2 #2#-6 #-3 # -2 # -1d
 
 # SAVES
-CHECKPOINT_PATH = '/mnt/SSD2/pholur/CTs/checkpoints/Day_1017_'
+CHECKPOINT_PATH = '/mnt/SSD2/pholur/CTs/checkpoints/CT5K_'
 ROOT_NAME = 'Insider_Outsider_'
 #INPUT_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_0922.csv"
-INPUT_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1017.csv"
-RAW_TRAIN_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1017_raw_train.csv"
-RAW_TEST_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1017_raw_test.csv"
-RAW_VAL_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1017_raw_val.csv"
+# INPUT_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1017.csv"
+# RAW_TRAIN_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1017_raw_train.csv"
+# RAW_TEST_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1017_raw_test.csv"
+# RAW_VAL_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1017_raw_val.csv"
+
+INPUT_DATA_PATH = "/mnt/SSD2/pholur/CTs/CT5K.csv"
+RAW_TRAIN_DATA_PATH = "/mnt/SSD2/pholur/CTs/CT5K_raw_train.csv"
+RAW_TEST_DATA_PATH = "/mnt/SSD2/pholur/CTs/CT5K_raw_test.csv"
+RAW_VAL_DATA_PATH = "/mnt/SSD2/pholur/CTs/CT5K_raw_val.csv"
 
 # INPUT_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1008.csv"
 # RAW_TRAIN_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1008_raw_train.csv"
@@ -58,9 +63,9 @@ RAW_VAL_DATA_PATH = "/mnt/SSD2/pholur/CTs/conspiracy_1017_raw_val.csv"
 DEPOSIT_PATH = "./ShortTerm_Results/"
 
 # CUDAs
-preferred_cuda = "cuda:5"
-preferred_cuda_test = "cuda:5"
-device_for_aug = "cuda:4"
+preferred_cuda = "cuda:0"
+preferred_cuda_test = "cuda:0"
+device_for_aug = "cuda:1"
 
 # Labels
 labels = {"insider":0, "outsider":2, "idk":1}
@@ -73,5 +78,8 @@ REVERSE_MAPPING = {0:"$AnswerA", 1:"$AnswerC", 2:"$AnswerB"}
 OPT = "test"
 PAIR_TEST_WITH_LEAVE_OUT = True
 
-MODEL_IN_TESTING = "/mnt/SSD2/pholur/CTs/checkpoints/Day_1017_Insider_Outsider_8_11961.pt"
+#MODEL_IN_TESTING = "/mnt/SSD2/pholur/CTs/checkpoints/CT5K_Insider_Outsider_1_2658.pt"
+#MODEL_IN_TESTING = "/mnt/SSD2/pholur/CTs/checkpoints/CT5K_Insider_Outsider_2_3987.pt"
+MODEL_IN_TESTING = "/mnt/SSD2/pholur/CTs/checkpoints/CT5K_Insider_Outsider_3_5316.pt"
+
 #MODEL_IN_TESTING = "/mnt/SSD2/pholur/CTs/checkpoints/Day_1017_Insider_Outsider_0_1329.pt"

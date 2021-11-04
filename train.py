@@ -16,8 +16,8 @@ train_loader, val_loader = get_data(PATH, FLAG, AUG, REEXTRACT, FRACTION, OPT, S
 
 print(model)
 ## Maybe freeze a few layers y'know... ask Pavan if you want to do that.
-#modules = [model.distilbert.embeddings, *model.distilbert.transformer.layer[:FROZEN_LAYERS]] #Replace 3 by what you want
-modules = [model.roberta.embeddings, *model.roberta.encoder.layer[:FROZEN_LAYERS]] #Replace 3 by what you want
+modules = [model.distilbert.embeddings, *model.distilbert.transformer.layer[:FROZEN_LAYERS]] #Replace 3 by what you want
+#modules = [model.roberta.embeddings, *model.roberta.encoder.layer[:FROZEN_LAYERS]] #Replace 3 by what you want
 
 for module in modules:
     for param in module.parameters():

@@ -21,8 +21,8 @@ if __name__ == "__main__":
     if PAIR_TEST_WITH_LEAVE_OUT:
         # # leave out NP phrase matches from test df and check
         list_of_seen_nps = list(df_train["NP"])
-        list_of_seen_nps = [nip.lower() for nip in list_of_seen_nps]
         list_of_seen_nps = [clean_text(nip) for nip in list_of_seen_nps]
+        list_of_seen_nps = [nip.lower() for nip in list_of_seen_nps]
         list_of_seen_nps = [clean2(nip) for nip in list_of_seen_nps]
         set_of_nps = set(list_of_seen_nps)
 

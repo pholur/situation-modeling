@@ -1,0 +1,6 @@
+
+Using separate samples per entity: Size =  499
+Traceback (most recent call last):
+  File "train.py", line 15, in <module>
+    train_loader, val_loader = get_data(PATH, FLAG, AUG, REEXTRACT, FRACTION, OPT, SAVE)
+ValueError: too many values to unpack (expected 2)

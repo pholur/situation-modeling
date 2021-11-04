@@ -1,0 +1,163 @@
+
+Using separate samples per entity: Size =  85009
+Using separate samples per entity: Size =  450
+DistilBertForTokenClassification(
+  (distilbert): DistilBertModel(
+    (embeddings): Embeddings(
+      (word_embeddings): Embedding(30522, 768, padding_idx=0)
+      (position_embeddings): Embedding(512, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (transformer): Transformer(
+      (layer): ModuleList(
+        (0): TransformerBlock(
+          (attention): MultiHeadSelfAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_lin): Linear(in_features=768, out_features=768, bias=True)
+            (k_lin): Linear(in_features=768, out_features=768, bias=True)
+            (v_lin): Linear(in_features=768, out_features=768, bias=True)
+            (out_lin): Linear(in_features=768, out_features=768, bias=True)
+          )
+          (sa_layer_norm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+          (ffn): FFN(
+            (dropout): Dropout(p=0.1, inplace=False)
+            (lin1): Linear(in_features=768, out_features=3072, bias=True)
+            (lin2): Linear(in_features=3072, out_features=768, bias=True)
+          )
+          (output_layer_norm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        )
+        (1): TransformerBlock(
+          (attention): MultiHeadSelfAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_lin): Linear(in_features=768, out_features=768, bias=True)
+            (k_lin): Linear(in_features=768, out_features=768, bias=True)
+            (v_lin): Linear(in_features=768, out_features=768, bias=True)
+            (out_lin): Linear(in_features=768, out_features=768, bias=True)
+          )
+          (sa_layer_norm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+          (ffn): FFN(
+            (dropout): Dropout(p=0.1, inplace=False)
+            (lin1): Linear(in_features=768, out_features=3072, bias=True)
+            (lin2): Linear(in_features=3072, out_features=768, bias=True)
+          )
+          (output_layer_norm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        )
+        (2): TransformerBlock(
+          (attention): MultiHeadSelfAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_lin): Linear(in_features=768, out_features=768, bias=True)
+            (k_lin): Linear(in_features=768, out_features=768, bias=True)
+            (v_lin): Linear(in_features=768, out_features=768, bias=True)
+            (out_lin): Linear(in_features=768, out_features=768, bias=True)
+          )
+          (sa_layer_norm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+          (ffn): FFN(
+            (dropout): Dropout(p=0.1, inplace=False)
+            (lin1): Linear(in_features=768, out_features=3072, bias=True)
+            (lin2): Linear(in_features=3072, out_features=768, bias=True)
+          )
+          (output_layer_norm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        )
+        (3): TransformerBlock(
+          (attention): MultiHeadSelfAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_lin): Linear(in_features=768, out_features=768, bias=True)
+            (k_lin): Linear(in_features=768, out_features=768, bias=True)
+            (v_lin): Linear(in_features=768, out_features=768, bias=True)
+            (out_lin): Linear(in_features=768, out_features=768, bias=True)
+          )
+          (sa_layer_norm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+          (ffn): FFN(
+            (dropout): Dropout(p=0.1, inplace=False)
+            (lin1): Linear(in_features=768, out_features=3072, bias=True)
+            (lin2): Linear(in_features=3072, out_features=768, bias=True)
+          )
+          (output_layer_norm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        )
+        (4): TransformerBlock(
+          (attention): MultiHeadSelfAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_lin): Linear(in_features=768, out_features=768, bias=True)
+            (k_lin): Linear(in_features=768, out_features=768, bias=True)
+            (v_lin): Linear(in_features=768, out_features=768, bias=True)
+            (out_lin): Linear(in_features=768, out_features=768, bias=True)
+          )
+          (sa_layer_norm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+          (ffn): FFN(
+            (dropout): Dropout(p=0.1, inplace=False)
+            (lin1): Linear(in_features=768, out_features=3072, bias=True)
+            (lin2): Linear(in_features=3072, out_features=768, bias=True)
+          )
+          (output_layer_norm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        )
+        (5): TransformerBlock(
+          (attention): MultiHeadSelfAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_lin): Linear(in_features=768, out_features=768, bias=True)
+            (k_lin): Linear(in_features=768, out_features=768, bias=True)
+            (v_lin): Linear(in_features=768, out_features=768, bias=True)
+            (out_lin): Linear(in_features=768, out_features=768, bias=True)
+          )
+          (sa_layer_norm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+          (ffn): FFN(
+            (dropout): Dropout(p=0.1, inplace=False)
+            (lin1): Linear(in_features=768, out_features=3072, bias=True)
+            (lin2): Linear(in_features=3072, out_features=768, bias=True)
+          )
+          (output_layer_norm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        )
+      )
+    )
+  )
+  (dropout): Dropout(p=0.1, inplace=False)
+  (classifier): Linear(in_features=768, out_features=3, bias=True)
+)
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [96,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [97,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [98,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [99,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [100,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [101,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [102,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [103,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [104,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [105,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [106,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [107,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [108,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [109,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [110,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [111,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [112,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [113,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [114,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [115,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [116,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [117,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [118,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [119,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [120,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [121,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [122,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [123,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [124,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [125,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [126,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+/pytorch/aten/src/ATen/native/cuda/Indexing.cu:658: indexSelectLargeIndex: block: [99,0,0], thread: [127,0,0] Assertion `srcIndex < srcSelectDimSize` failed.
+Traceback (most recent call last):
+  File "train.py", line 41, in <module>
+    outputs = model(input_ids, attention_mask=attention_mask, labels=labels)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/models/distilbert/modeling_distilbert.py", line 968, in forward
+    return_dict=return_dict,
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/models/distilbert/modeling_distilbert.py", line 550, in forward
+    inputs_embeds = self.embeddings(input_ids)  # (bs, seq_length, dim)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/pholur/miniconda3/envs/sit/lib/python3.7/site-packages/transformers/models/distilbert/modeling_distilbert.py", line 133, in forward
+    embeddings = word_embeddings + position_embeddings  # (bs, max_seq_length, dim)
+RuntimeError: CUDA error: device-side assert triggered
