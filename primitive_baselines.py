@@ -152,8 +152,8 @@ def return_insiders_and_outsiders(text, option_display=False, sample_text=None, 
         if npy.text == sample_text:
             FLAG = True
 
-        if CBOW_shortcut: # this is for the CBOW model
-            return (npy.start_char, npy.end_char)
+            if CBOW_shortcut: # this is for the CBOW model
+                return (npy.start_char, npy.end_char)
 
         spans.append((npy.start_char, npy.end_char))
 
@@ -191,6 +191,7 @@ def return_insiders_and_outsiders(text, option_display=False, sample_text=None, 
     else:
         # in case our model cannot find the chunk
         start_index, end_index = None, None
+        sample_text = clean_text(sample_text)
         res = re.finditer(" " + sample_text, text)
         if res != []:
             for m in res:

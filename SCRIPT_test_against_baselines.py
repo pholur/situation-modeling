@@ -8,8 +8,8 @@ from tqdm import tqdm
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 
 # all the test set here has to be labeled!
-models = ["RANDOM", "DET_0", "DET_1", "DET_2", "SEMI1_lemm", "SEMI2_exact", "CBOW-1", "CBOW-2", "CBOW-5", "OUR MODEL"]
-#models = ["OUR MODEL"]
+#models = ["RANDOM", "DET_0", "DET_1", "DET_2", "SEMI1_lemm", "SEMI2_exact", "CBOW-1", "CBOW-2", "CBOW-5", "OUR MODEL"]
+models = ["CBOW-1", "CBOW-2", "CBOW-5"]
 #type_of_model = ["contextual"]
 type_of_model = ["random", "deterministic", "deterministic", "deterministic", "naïve Bayesian", "naïve Bayesian", "C: GLoVE300 + XGB", "C: GLoVE300 + XGB", "C: GLoVE300 + XGB", "C: BERT I/O Model"]
 if __name__ == "__main__":
